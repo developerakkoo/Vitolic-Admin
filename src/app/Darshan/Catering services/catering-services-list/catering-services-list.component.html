@@ -1,0 +1,170 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="d-flex p-1  justify-content-between">
+                <h4 class="Darshan_head pt-3">Catering list</h4>
+                <button class="btn  mb-3  mt-2 creat" routerLink="../add-services">Add services</button>
+            </div>
+            <div class="row">
+                <div>
+                    <div class="Cark-back back-2 ">
+                        <div class="">
+                            <p class="Darshan_head2 p-2">Catering services List</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <div class="card-body">
+                                    <table class="table tab table table-hover">
+                                        <thead class="headline">
+                                            <tr>
+                                                <th class="td-sz" scope="col">S.no.</th>
+                                                <th class="td-sz" scope="col">Book by</th>
+                                                <th class="td-sz" scope="col">Date & Time</th>
+                                                <th class="td-sz" scope="col">No. of people</th>
+                                                <th class="td-sz" scope="col"> Special Request</th>
+                                                <th class="td-sz" scope="col">Total Payment</th>
+                                                <th class="td-sz" scope="col">Menu item</th>
+                                                <th class="td-sz" scope="col">Delivery Type</th>
+                                                <th class="td-sz" scope="col">Status</th>
+                                                <th class="td-sz " scope="col"> Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="td-sz" scope="col">1</td>
+                                                <td class="td-sz" scope="col"><button class="user" (click)="openModal()"> User Name</button></td>
+
+                                                <td class="td-sz" scope="col">25-10- 2021 (6AM)</td>
+                                                <td class="td-sz" scope="col">100</td>
+                                                <td class="td-sz" scope="col">ABC</td>
+                                                <td class="td-sz" scope="col">$30</td>
+                                                <td class="td-sz" scope="col"><a class="btn de-btn de-3" data-toggle="modal" data-target="#tableModal">View list</a></td>
+                                                <td class="td-sz" scope="col">Delivery</td>
+                                                <td class="td-sz" scope="col"> Pending</td>
+                                                <td class="td-sz" scope="col">
+                                                    <a type="button" class="btn  de-btn de-2 mb-2 viewBtn ml-2" data-toggle="modal" data-target="#exampleModal">APPROVE</a>
+                                                    <a class="btn de-btn de-1 mb-2 de-2 viewBtn rejectBtn ml-2">Reject</a>
+                                                    <a type="button" class="btn de-btn de-2 viewBtn ml-2">View/Edit</a>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+
+<!---------------Model Open------------------------------->
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modell">
+        <div class="modal-content">
+            <!-- <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div> -->
+            <div class="modal-body justify-content-center">
+                <p class="text-center pt-5">Do you want to approve this user Request</p>
+            </div>
+            <div class="modal-footer  Footer_Model justify-content-center ">
+                <button type="button" class="btn Model_btton">Yes</button>
+                <button type="button" class="btn Model_btton" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!------------------------------Menu List Item------------------------------------->
+
+<div class="modal fade" id="tableModal" tabindex="-1" aria-labelledby="tableModalLabel" aria-hidden="true">
+    <div class="modal-dialog modell modalCenter">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <div class="card-body">
+                                    <h3 class="Darshan_head2  p-2">Courses List</h3>
+                                    <table class="table tab table table-hover">
+                                        <thead class="headline">
+                                            <tr>
+                                                <th class="a" scope="col">Image</th>
+                                                <th class="a" scope="col">Menu Name </th>
+                                                <th class="a" scope="col"> Menu Item</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="td-sz">
+                                                    <div class="icon text-center">
+                                                        <img class="profile-image-style" src='../../../../assets/images/userPrfl.png' />
+                                                    </div>
+                                                </td>
+                                                <td class="td-sz">Menu</td>
+                                                <td class="td-sz">
+                                                    <li >Item 1</li>
+                                                    <li>Item 2</li>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-sz">
+                                                    <div class="icon text-center">
+                                                        <img class="profile-image-style" src='../../../../assets/images/userPrfl.png' />
+                                                    </div>
+                                                </td>
+                                                <td class="td-sz">Menu</td>
+                                                <td class="td-sz">
+                                                    <li >Item 1</li>
+                                                    <li>Item 2</li>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-sz">
+                                                    <div class="icon text-center">
+                                                        <img class="profile-image-style" src='../../../../assets/images/userPrfl.png' />
+                                                    </div>
+                                                </td>
+                                                <td class="td-sz">Menu</td>
+                                                <td class="td-sz">
+                                                    <li >Item 1</li>
+                                                    <li>Item 2</li>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer  Footer_Model justify-content-center ">
+                <button type="button" class="btn Model_btton" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

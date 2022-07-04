@@ -1,0 +1,56 @@
+<div class="content-wrapper">
+    <section>
+
+        <!-- (ngSubmit)="onSubmit()" -->
+
+        <div class="card card_back">
+            <div class="pucNoti">
+                <h4 class=""> Notification</h4>
+               
+            </div>
+            <div class="desForm formDash">
+                        <div class="card-body">
+                            <form [formGroup]="darshanForm" (ngSubmit)="onSubmit()">
+                                <div class="form-row">
+                                    <div class="form-group col-5">
+                                        <label>Type</label>
+                                        <select formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                                            <option value="">Deliver Boy</option>
+                                            <option value="Mr">customer</option>
+                                            
+                                        </select>
+                                        <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                                            <div *ngIf="f.title.errors.required">Title is required</div>
+                                        </div>
+                                    </div>
+                                    
+                                  
+                                </div>
+                             
+                                <div class="form-group col-5 file-area">
+                                    <label for="images">Images </label>
+                                <input type="file" name="images" id="images" required="required" multiple="multiple"/>
+                                <div class="file-dummy">
+                                  <div class="success">Great, your files are selected. Keep on.</div>
+                                  <div class="default">Please select some files</div>
+                                </div>
+                              </div>
+                                 
+                                <div class="text-center mrButton">
+                                    <button class="btn Save_re cancelBtn  mr-1">Save</button>
+                                    <button class="btn Save_re saveBtn"  type="reset" (click)="onReset()">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    
+                       
+                      
+                     
+                      
+                    
+            </div>
+        </div>
+
+
+    </section>
+</div>

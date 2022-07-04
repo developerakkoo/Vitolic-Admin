@@ -1,0 +1,83 @@
+<!-- <div class="NgxEditor__Wrapper">
+    <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+    <ngx-editor [editor]="editor" [ngModel]="html" [disabled]="false" [placeholder]="'dgdfhgfhf'"></ngx-editor>
+</div> -->
+
+<!-- <app-ngx-editor [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="htmlContent"></app-ngx-editor> -->
+<!-- <div class="NgxEditor__Wrapper">
+    <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"> </ngx-editor-menu>
+    <ngx-editor [editor]="editor" [ngModel]="html" [editable]="true" [placeholder]="Type here..."></ngx-editor>
+</div> -->
+
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="d-flex p-1  justify-content-between">
+                <h4 class="Darshan_head pt-3">Add Policy</h4>
+            </div>
+            <div class="card card_back p-3">
+                <form [formGroup]="darshanForm" (ngSubmit)="onSubmit()" class="p-3">
+
+                    <div class="row form-row mt-5">
+                        <div class="col-md-3 mr-5">
+                            <label>Document No.</label>
+                            <input type="text" formControlName="document" placeholder="News title" class="form-control control_form{ 'is-invalid': submitted && f.document.errors }" />
+                            <div *ngIf="submitted && f.document.errors" class="invalid-feedback">
+                                <div *ngIf="f.document.errors.required">First Name is required</div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+                            <label>Date</label>
+                            <input type="date" formControlName="date" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.date.errors }" />
+                            <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                                <div *ngIf="f.date.errors.required">Last Name is required</div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="row form-row mt-5">
+                        <div class="col-md-7 form-group">
+                            <label>Short Description</label>
+                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row  form-row mt-5 ">
+                        <div class="col-md-2 form-group">
+                            <p class="long">Long Description</p>
+                        </div>
+
+                        <div class="col-md-8">
+                            <ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="d-flex justify-content-start">
+                        <button type="button" class="btn  Save_re " routerLink="../terms">Cancel </button>
+                        <button class="btn btn-primary mr-1 Save_re sav2 ml-3">Save </button>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<!-- <div class="NgxEditor__Wrapper">
+    <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+    <ngx-editor [editor]="editor" [ngModel]="html" [disabled]="false" [placeholder]="'Type here...'"></ngx-editor>
+</div> -->

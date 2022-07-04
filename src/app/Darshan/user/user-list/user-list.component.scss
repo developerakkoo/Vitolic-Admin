@@ -1,0 +1,169 @@
+// .pucNoti h1, p {
+//     font-weight: 400;
+//     font-size: 16px;
+//     line-height: 19px;
+//     /* identical to box height, or 118% */
+//     letter-spacing: 0.7px;
+//     color: #464855;
+// }
+// a.de-btn {
+//     padding:1px 30px;
+//     background: #597393;
+//     color: #ffff;
+//     font-size: 12px;
+//     box-shadow: 0px 10px 18px rgba(62, 57, 107, 0.2);
+//     border-radius: 21px;
+//     margin-top: 10px;
+// }
+// .card-body {
+//     margin-bottom: 30px;
+// }
+// .Add_user {
+//     border: none;
+//     color: #fff;
+//     background-color: #597393;
+//     padding: 7px 23px;
+//     border-radius: 2px;
+//     margin-bottom: 1%;
+//     margin-top: 20px;
+// }
+// .user_head {
+//     font-weight: 400;
+//     font-size: 21px;
+//     line-height: 25px;
+//     letter-spacing: 1px;
+//     color: #464855;
+//     margin-top: 20px;
+// }
+// .headline {
+//     color: #6B6F82;
+//     font-weight: 100;
+//     text-align: center;
+//     font-family: system-ui;
+// }
+
+.dropbtn{
+    // margin-top: -9px;
+}
+.dropdown-content {
+    margin-left: -71px;
+    text-align: left;
+}
+.Tab{
+    width: 15%;
+}
+td.td-sz {
+    padding: 25px 32px;}
+.edt{
+    padding: 0px !important;
+}
+    
+    .modal-confirm {		
+        color: #636363;
+        width: 400px;
+    }
+    .modal-confirm .modal-content {
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+        font-size: 14px;
+    }
+    .modal-confirm .modal-header {
+        border-bottom: none;   
+        position: relative;
+    }
+    .modal-confirm h4 {
+        text-align: center;
+        font-size: 26px;
+        margin: 30px 0 -10px;
+    }
+    .modal-confirm .close {
+        position: absolute;
+        top: -5px;
+        right: -2px;
+    }
+    .modal-confirm .modal-body {
+        color: #999;
+    }
+    .modal-confirm .modal-footer {
+        border: none;
+        text-align: center;		
+        border-radius: 5px;
+        font-size: 13px;
+        padding: 10px 15px 25px;
+    }
+    .modal-confirm .modal-footer a {
+        color: #999;
+    }		
+    .modal-confirm .icon-box {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        border-radius: 50%;
+        z-index: 9;
+        text-align: center;
+        border: 3px solid #f15e5e;
+    }
+    .modal-confirm .icon-box i {
+        color: #f15e5e;
+        font-size: 46px;
+        display: inline-block;
+        margin-top: 13px;
+    }
+    .modal-confirm .btn, .modal-confirm .btn:active {
+        color: #fff;
+        border-radius: 4px;
+        background: #60c7c1;
+        text-decoration: none;
+        transition: all 0.4s;
+        line-height: normal;
+        min-width: 120px;
+        border: none;
+        min-height: 40px;
+        border-radius: 3px;
+        margin: 0 5px;
+    }
+    .modal-confirm .btn-secondary {
+        background: #c1c1c1;
+    }
+    .modal-confirm .btn-secondary:hover, .modal-confirm .btn-secondary:focus {
+        background: #a8a8a8;
+    }
+    .modal-confirm .btn-danger {
+        background: #f15e5e;
+    }
+    .modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+        background: #ee3535;
+    }
+    // .trigger-btn {
+    //     display: inline-block;
+    //     margin: 100px auto;
+    // }
+    .breadcrumb {
+        list-style: none;
+        background: none;
+        margin: 0 0 25px;
+        padding-left: 10px;
+        li {
+            font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-15) / var(--unnamed-line-spacing-23) var(--unnamed-font-family-poppins);
+            letter-spacing: var(--unnamed-character-spacing-0);
+            color: var(--unnamed-color-000000);
+            text-align: left;
+            // text-transform: capitalize;
+            opacity: 0.5;
+            display: inline;
+            padding: 0 15px 0 0;
+            a {
+                text-decoration: none;
+                color: var(--unnamed-color-000000);
+                &:after {
+                    content: "/";
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+
+    

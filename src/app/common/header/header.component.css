@@ -1,0 +1,29 @@
+.main-header {
+  background: #21AD4B;
+}
+
+img.logo_image1 {
+  margin-top: 0px;
+  margin-right: 5px;
+  margin-left: 12px;
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 2em;
+}
+
+img.logo_image2 {
+  margin-top: 8px;
+  margin-right: 48px;
+}
+
+.navbar-expand .navbar-nav .dropdown-menu {
+  position: absolute;
+  margin-left: -82px;
+  margin-top: 10px;
+}
+
+li.nav-item.text {
+  color: #f6f6f6;
+  font-size: 12px;
+}
+/*# sourceMappingURL=header.component.css.map */

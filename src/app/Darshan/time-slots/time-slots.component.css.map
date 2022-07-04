@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "time-slots.component.scss"
+    ],
+    "names": [],
+    "file": "time-slots.component.css"
+}

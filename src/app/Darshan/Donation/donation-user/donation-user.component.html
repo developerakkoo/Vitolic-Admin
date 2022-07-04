@@ -1,0 +1,47 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="d-flex p-1  justify-content-between">
+                <h4 class="Darshan_head pt-3">User’s Donation list</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <div class="card-body">
+                                    <div class="col-md-2">
+                                        <h4 class="Darshan_head2 event p-2">User’s List
+                                        </h4>
+                                    </div>
+                                    <table class="table tab table table-hover">
+
+                                        <thead class="headline">
+                                            <tr>
+                                                <th class="" scope="col">S.no.</th>
+                                                <th class="" scope="col">Donation By </th>
+                                                <th class="" scope="col">Type</th>
+                                                <th class="" scope="col"> Date</th>
+                                                <th class="" scope="col">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of donationAllUserList;let i = index">
+                                                <td class="td-sz">{{i+1}}</td>
+                                                <td class="td-sz">{{item.donation_by}}</td>
+                                                <td class="td-sz">{{item.type}}</td>
+                                                <!-- <td class="td-sz">{{item.date | date: 'dd/MM/yyyy'}}</td> -->
+                                                <td class="td-sz">${{item.amount}}</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

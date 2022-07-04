@@ -1,0 +1,206 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="d-flex p-1  justify-content-between">
+                <h4 class="Darshan_head pt-3">Payment Status
+                </h4>
+  
+  
+            </div>
+  
+          
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <div class="card-body">
+  
+                                    <table class="table tab table table-hover">
+  
+                                        <thead class="headline">
+                                            <tr>
+                                                <th class="td-sz" scope="col">S.no.</th>
+                                                <th class="td-sz" scope="col"> User name</th>
+                                                <th class="td-sz" scope="col">Date & Time</th>
+  
+                                                <th class="td-sz" scope="col">COD
+                                                </th>
+                                                <th class="td-sz" scope="col"> PayPal
+                                                </th>
+                                                <th class="td-sz" scope="col">Razorpay</th>
+                                                <th class="td-sz" scope="col">Stripe</th>
+  
+                                                <th class="td-sz" scope="col">Payment status
+                                                </th>
+  
+  
+                                            </tr>
+                                        </thead>
+  
+  
+                                        <tbody>
+                                            <tr>
+                                                <td class="td-sz" scope="col">1</td>
+  
+                                                <td class="td-sz" scope="col">type1</td>
+                                                <td class="td-sz" scope="col">25-10- 2021 (6AM)
+                                                </td>
+  
+                                                <td class="td-sz" scope="col"><div class="form-group form-groups">
+                                                    <input type="checkbox" id="html">
+                                                    <label for="html"></label>
+                                                  </div></td>
+                                                <td class="td-sz" scope="col"><div class="form-group form-groups">
+                                                    <input type="checkbox" id="css">
+                                                    <label for="css"></label>
+                                                  </div></td>
+                                                <td class="td-sz" scope="col"> <div class="form-group form-groups">
+                                                    <input type="checkbox" id="javascript">
+                                                    <label for="javascript"></label>
+                                                  </div></td>
+  
+                                                <td class="td-sz" scope="col"> <div class="form-group form-groups">
+                                                    <input type="checkbox" id="Scripte">
+                                                    <label for="Scripte"></label>
+                                                  </div></td>
+  
+  
+                                                  <td class="td-sz edt">
+
+                                                    <div class="justify-content-between"  >
+                                                      
+                                                        <a type="button" class="dropbtn" data-toggle="modal" data-target="#staticBackdrop" style="margin-right:8px ;" >
+                                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                        </a>
+                                                          <a href="#myModal" class="dropbtn mt-2" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                         
+                                                    </div>
+                                                </td>
+  
+  
+                                            </tr>
+
+                                            
+  
+                                            <!-- <app-meditation-list></app-meditation-list> -->
+  
+  
+                                        </tbody>
+                                    </table>
+  
+                                    <div id="myModal" class="modal fade">
+                                        <div class="modal-dialog modal-confirm">
+                                            <div class="modal-content">
+                                                <div class="modal-header flex-column">
+                                                    <div class="icon-box">
+                                                        <i class="material-icons">&#xE5CD;</i>
+                                                    </div>						
+                                                    <h4 class="modal-title w-100">Are you sure?</h4>	
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Do you really want to delete these records? This process cannot be undone.</p>
+                                                </div>
+                                                <div class="modal-footer justify-content-center">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                    <button type="button" class="btn btn-danger">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+
+
+
+
+
+
+
+                                    <!--------------------------------------------------------------------->
+<!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Edit Payment
+        </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                   
+                    <div class="form-group col-5">
+                        <label>User Name</label>
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">User Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-5">
+                        <label>Date</label>
+                        <input type="date" formControlName="date" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.date.errors }" />
+                        <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                            <div *ngIf="f.date.errors.required">User Name is required</div>
+                        </div>
+                    </div>
+                  
+                    </div>
+                    <div class="form-row">
+                    <div class="form-group col-5">
+                        <div class="form-group form-groups">
+                            <input type="checkbox" id="COD">
+                            <label for="COD">Cash On Deliver</label>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-5">
+                                <div class="form-group form-groups">
+                                    <input type="checkbox" id="PayPal">
+                                    <label for="PayPal">PayPal</label>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-5">
+                                        <div class="form-group form-groups">
+                                            <input type="checkbox" id="Razorpay">
+                                            <label for="Razorpay">Razorpay</label>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-5">
+                                                <div class="form-group form-groups">
+                                                    <input type="checkbox" id="Stripe">
+                                                    <label for="Stripe">Stripe</label>
+                                                </div>
+                                                </div>
+                                                </div>
+                    </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn  Save_re sav2" data-dismiss="modal" routerLink="../classes-list">Close</button>
+          <button type="button" class="btn  Save_re">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+          
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+  
+  </div>

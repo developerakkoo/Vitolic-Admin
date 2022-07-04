@@ -1,0 +1,118 @@
+input[type="checkbox"] {
+    height: 16px;
+    width: 15px;
+    // position: relative;
+    cursor: default;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &,
+    &:checked,
+    &:focus,
+    &::before,
+    &::after,
+    &:checked::after,
+    &:checked::before,
+    &:hover {
+        outline: none;
+        outline-color: none;
+    }
+    &::before {
+        content: '';
+        border: 2px solid #597393;
+        height: 18px;
+        width: 19px;
+        position: absolute;
+        // left: 26px;
+        top: 5px;
+        box-sizing: border-box;
+        z-index: 9;
+    }
+    &:checked::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 0px;
+        box-sizing: border-box;
+        width: 7px;
+        height: 16px;
+        border: solid #597393;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        z-index: 10;
+    }
+}
+
+.permissionClass {
+    border: 1px solid;
+    border-top: none;
+    padding: 28px;
+    border-color: lightgrey;
+}
+
+label.d-flex.justify-content-center.bussiness {
+    margin-left: 35px;
+}
+
+.Save_re {
+    background-color: #FCAA2D;
+    padding: 9px 25px;
+    border: none;
+    font-size: 13px;
+    margin-top: 4%;
+    color: #ffff;
+    box-shadow: 0px 10px 18px rgb(62 57 107 / 20%);
+    border-radius: 21px;
+}
+
+button.btn.Save_re.sav2 {
+    padding: 9px 30px;
+}
+
+button.btn.Save_re.sav3 {
+    padding: 9px 35px;
+}
+
+.Str {
+    display: block;
+}
+
+// @media screen and (min-device-width: 767px) and (max-device-width: 991px) {
+//     .form-group1 {
+//         // float: left;
+//         width: 100%;
+//     }
+// }
+// @media screen and(min-device-width: 576px) and (max-device-width: 766px) {
+//     .form-group1 {
+//         // float: left;
+//         width: 100%;
+//     }
+// }
+// @media screen and(min-device-width: 320px) and (max-device-width: 575px) {
+//     .form-group1 {
+//         // float: left;
+//         width: 100%;
+//     }
+//     .form-row {
+//         padding-right: 10px !important;
+//         padding-left: 10px !important;
+//     }
+// }
+// @media screen and(min-device-width: 280px) and (max-device-width: 319px) {
+//     .form-group1 {
+//         // float: left;
+//         width: 100%;
+//     }
+//     .form-row {
+//         padding-right: 10px !important;
+//         padding-left: 10px !important;
+//     }
+//     button.btn.Save_re.sav2 {
+//         padding: 9px 31px;
+//     }
+// }

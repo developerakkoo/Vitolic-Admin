@@ -1,0 +1,172 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="d-flex p-1  justify-content-between">
+                <h4 class="Darshan_head pt-3">Sub Admin</h4>
+             
+                <button class="btn  mb-2  mt-2 creat " routerLink="/admin/add-subadmin">Add Subadmin</button>
+               
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <div class="card-body">
+                                    <!-- <h3 class="Darshan_head2 p-2">Sub admin</h3> -->
+                                    <div class="new">
+                                        <form>
+                                          <div class="form-group">
+                                            <input type="checkbox" id="City">
+                                            <label for="City">Total City</label>
+                                          </div>
+                                          <div class="form-group">
+                                            <input type="checkbox" id="Banner">
+                                            <label for="Banner">Total Banner</label>
+                                          </div>
+                                          <div class="form-group">
+                                            <input type="checkbox" id="Category">
+                                            <label for="Category">Total Category</label>
+                                          </div>
+
+                                          <div class="form-group">
+                                            <input type="checkbox" id="html">
+                                            <label for="html">Total SubCategory</label>
+                                          </div>
+                                          <div class="form-group">
+                                            <input type="checkbox" id="deliverBoy">
+                                            <label for="deliverBoy">Total Deliver Boy</label>
+                                          </div>
+                                          <div class="form-group">
+                                            <input type="checkbox" id="Total Coupan">
+                                            <label for="javascript">Total Category</label>
+                                          </div>
+                                        </form>
+                                      </div>
+                                    <!-- <table class="table tab table table-hover">
+
+                                        <thead class="headline">
+                                            <tr>
+                                                <th class="" scope="col">S.no.</th>
+                                                <th class="" scope="col">Name</th>
+                                                <th class="" scope="col"> Email </th>
+                                                <th class="" scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                            <tr *ngFor="let item of subadminList; let i = index">
+                                                <td class="td-sz" scope="col">{{i+1}}</td>
+                                                <td class="td-sz" scope="col">{{item.full_name}}</td>
+                                                <td class="td-sz" scope="col">{{item.email}}</td>
+                                                <td class="td-sz ">
+                                                    <a class="btn de-btn de-2" routerLink="../add-subadmin">View/Edit</a>
+                                                    <a class="btn de-btn de-1">Delete</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+             <!-- <form [formGroup]="parmissionForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Title</label>
+                        <select formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                            <option value=""></option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Ms">Ms</option>
+                        </select>
+                        <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                            <div *ngIf="f.title.errors.required">Title is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-5">
+                        <label>First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-5">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label>Confirm Password</label>
+                        <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                        <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                            <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                            <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
+                    <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+                    <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1">Register</button>
+                    <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+                </div>
+            </form> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+            
+            
+        </div>
+    </section>
+</div>

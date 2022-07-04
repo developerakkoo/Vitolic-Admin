@@ -1,0 +1,48 @@
+ul.nav.nav-pills.nav-sidebar.flex-column {
+  padding-bottom: 40px;
+}
+
+.Logo {
+  width: 98%;
+}
+
+.main-sidebar {
+  background: #21AD4B;
+}
+
+.nav-txt {
+  padding: 0px 10px 5px;
+  color: #f6f6f6;
+}
+
+.nav-sidebar .nav-link > .right, .nav-sidebar .nav-link > p > .right {
+  position: absolute;
+  right: 1rem;
+  top: 0.9rem !important;
+}
+
+a.nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+}
+
+a.nav-link:hover {
+  background-color: #e3caa4 !important;
+}
+
+.dropdown-active {
+  background-color: #FCAA2D !important;
+}
+
+.dropdown-inactive {
+  background-color: #21AD4B !important;
+}
+
+.nav-txt {
+  cursor: pointer;
+}
+/*# sourceMappingURL=sidebar.component.css.map */

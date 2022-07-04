@@ -1,0 +1,201 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="d-flex p-1  justify-content-between">
+                <h4 class="Darshan_head pt-3">Menu List
+                </h4>
+                <button class="btn  mb-3  mt-2 creat " (click)="openModal()">Add Menu</button>
+            </div>
+            <div class="row">
+                <div>
+                    <div class="  Cark-back back-2">
+                        <div class="">
+                            <h3 class="Darshan_head2 p-2">Menu List</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <div class="card-body">
+                                    <table class="table tab table table-hover">
+                                        <thead class="headline">
+                                            <tr>
+                                                <th class="td-sz" scope="col">S.no.</th>
+                                                <th class="td-sz" scope="col"> Name</th>
+                                                <th class="td-sz" scope="col">No. of Item</th>
+                                                <th class="td-sz" scope="col">Image</th>
+                                                <th class="td-sz " scope="col"> Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="td-sz" scope="col">1</td>
+                                                <td class="td-sz" scope="col">ABC</td>
+                                                <td class="td-sz" scope="col">4</td>
+                                                <td class="td-sz" scope="col"> <a class="btn de-btn">View Image</a></td>
+                                                <td class="td-sz" scope="col">
+                                                    <a class="btn de-btn de-2">View/Edit</a>
+                                                    <a class="btn de-btn de-1">Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-sz" scope="col">2</td>
+                                                <td class="td-sz" scope="col">ABC</td>
+                                                <td class="td-sz" scope="col">6</td>
+                                                <td class="td-sz" scope="col"> <a class="btn de-btn">View Image</a></td>
+                                                <td class="td-sz" scope="col">
+                                                    <a class="btn de-btn de-2">View/Edit</a>
+                                                    <a class="btn de-btn de-1">Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-sz" scope="col">3</td>
+                                                <td class="td-sz" scope="col">ABC</td>
+                                                <td class="td-sz" scope="col">4</td>
+                                                <td class="td-sz" scope="col"> <a class="btn de-btn">View Image</a></td>
+                                                <td class="td-sz" scope="col">
+                                                    <a class="btn de-btn de-2">View/Edit</a>
+                                                    <a class="btn de-btn de-1">Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-sz" scope="col">4</td>
+                                                <td class="td-sz" scope="col">ABC</td>
+                                                <td class="td-sz" scope="col">7</td>
+                                                <td class="td-sz" scope="col"> <a class="btn de-btn">View Image</a></td>
+                                                <td class="td-sz" scope="col">
+                                                    <a class="btn de-btn de-2">View/Edit</a>
+                                                    <a class="btn de-btn de-1">Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-sz" scope="col">5</td>
+                                                <td class="td-sz" scope="col">ABC</td>
+                                                <td class="td-sz" scope="col">2</td>
+                                                <td class="td-sz" scope="col"> <a class="btn de-btn">View Image</a></td>
+                                                <td class="td-sz" scope="col">
+                                                    <a class="btn de-btn de-2">View/Edit</a>
+                                                    <a class="btn de-btn de-1">Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="td-sz" scope="col">6</td>
+                                                <td class="td-sz" scope="col">ABC</td>
+                                                <td class="td-sz" scope="col">6</td>
+                                                <td class="td-sz" scope="col"> <a class="btn de-btn">View Image</a></td>
+                                                <td class="td-sz" scope="col">
+                                                    <a class="btn de-btn de-2">View/Edit</a>
+                                                    <a class="btn de-btn de-1">Delete</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!---------------------------Model Open-------------------------------------------->
+
+
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+    <div class="modal-dialog modal-lg p-2 modalCenter" role="document">
+        <div class="modal-content">
+            <div class="modal-header head">
+                <h3 class="modal-title  title-model">Add Menu</h3>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]=" menuForm" (ngSubmit)="onSubmit()">
+                    <div class="row mt-3">
+                        <div class="col-md-2">
+                            <p class="">Add Menu</p>
+                        </div>
+                        <div class="col-md-9">
+
+                            <input type="text" formControlName="firstName" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                <div *ngIf="f.firstName.errors.required">Menu Name is required</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-2">
+                            <p class="">Price</p>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" formControlName="price" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                                <div *ngIf="f.price.errors.required">Price is required</div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="select" tabindex="1">
+                                <select class="form-select"  formControlName="price" aria-label="Default select example"[(ngModel)]="menuForm.title" [ngClass]="{ 'is-invalid': submitted && f.price.errors }">
+                                  <option selected >Select </option>
+                                  <option value="India">Box</option>
+                                  <option value="Australia">Person</option>
+                                </select>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-row mt-4">
+                        <div class="col-md-3 form-group">
+                            <p class=" thum">Thumbnail Images</p>
+                        </div>
+                        <div class="col-md-8">
+                            <label class="new-button new-button2" for="upload">Choose File</label>
+                            <input id="upload" type="file" name="filename"> <span class="No_file">No File chosen</span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <p class=""> Menu Items</p>
+                    </div>
+                    <div class="row form-row ">
+                        <div class="col-md-3 form-group">
+                            <input class="form-control control_form"formControlName="itemName" [ngClass]="{ 'is-invalid': submitted && f.itemName.errors }" id="ex1" type="text" placeholder="Item name">
+                            <div *ngIf="submitted && f.itemName.errors" class="invalid-feedback">
+                                <div *ngIf="f.itemName.errors.required">Item Name is required</div>
+                              </div>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <input class="form-control control_form" formControlName="detail"id="ex1" type="text" placeholder="Detail"[ngClass]="{ 'is-invalid': submitted && f.detail.errors }">
+                            <div *ngIf="submitted && f.detail.errors" class="invalid-feedback">
+                                <div *ngIf="f.detail.errors.required">Detail is required</div>
+                              </div>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <p class="mt-2 " style="margin-top: 5%;"> Item Thumbnail </p>
+                        </div>
+                        <div class="col-md-3 form-group">
+                            <label class="new-button1" for="upload">Choose File</label>
+                            <input id="upload" type="file" name="filename">
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <button class="More_add">Add More</button>
+                    </div>
+                    <div class="Footer_model footer mb-2 ">
+                        <div class="d-flex justify-content-end mb-5">
+                            <button type="button" class="btn btn-default Save-res Model_btton" (click)="onCloseHandled()">Close</button>
+                            <button class="btn Save-res  Model_btton ml-3">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

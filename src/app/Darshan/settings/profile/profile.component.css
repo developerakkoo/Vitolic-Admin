@@ -1,0 +1,39 @@
+.Save_re {
+  margin-top: 10%;
+  color: white !important;
+  font-weight: 550 !important;
+}
+
+.icon.text-center img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 160px;
+}
+
+.profileSection {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 27%;
+  bottom: 0;
+}
+
+.profile-image-style {
+  border-radius: 50%;
+  height: 9em !important;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 576px) {
+  .profileSection {
+    position: initial;
+  }
+}
+
+@media screen and (min-device-width: 280px) and (max-device-width: 319px) {
+  .profileSection {
+    position: initial;
+  }
+}
+/*# sourceMappingURL=profile.component.css.map */

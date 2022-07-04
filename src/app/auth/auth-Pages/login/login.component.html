@@ -1,0 +1,129 @@
+<!-- <form action="page.html" method="post">
+    <label>Fruit: <input type="text" name="fruit" dirname="fruit.dir" value="cherry"></label>
+    <input type="submit"/>
+  </form>
+  page.html?fruit=cherry&fruit.dir=ltr
+  <div class="">
+    <p class="text-primary">.text-primary</p>
+  </div>
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <button type="button" class="btn btn-danger">Left</button>
+    <button type="button" class="btn btn-warning">Middle</button>
+    <button type="button" class="btn btn-success">Right</button>
+  </div>
+ -->
+
+<!------------------------------------------->
+
+<!-- 
+<div class="container">
+    <div class="imag_wrapper">
+  <div class="img mt-2">
+    <picture>
+        <source media='(min-width:0px)' srcset="../../../assets/images/logo.png" >
+        <img mat-card-image src="" alt="Photo of a Shiba Inu"class="logo">
+      </picture>
+  </div>
+</div>
+
+<div class="Form">
+    <h2 class="mt-2 Login">Login</h2>
+
+</div>
+
+<div class=""> 
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> -->
+<section>
+    <div class="container-fluid box">
+      <div class="row d-flex justify-content-center">
+        <div class="d-flex justify-content-center Login_rows">
+          <div class="col-12 col-sm-8 col-md-6 col-lg-3">
+            <div class="text-center font_logi mt-4 mb-2">
+              <h1 class="Login_font">Login To</h1>
+              <h1 class="Login_font">Dashboard</h1>
+            </div>
+            <div class="card logo-image p-3">
+              <div class="row d-flex justify-content-center">
+                <div class="col-md-3"></div>
+                <div class="col-6">
+                  <img src="../../../assets/images/logo.png" class="card-img-top logo rounded mx-auto d-block"
+                    alt="..." />
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+              <div class="card-body">
+                <div class="Border_over">
+                  <form [formGroup]="login_form" (submit)="submitForm()">
+  
+                    <div class="form-row">
+                      <div class="form-group col ">
+  
+                        <input type="text" formControlName="lastName" placeholder="Enter Name" class="form-control Login"
+                          [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                          <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row mt-4">
+                      <div class="form-group col">
+                        <input type="text" formControlName="email" placeholder="Enter Email" class="form-control Login"
+                          [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                          <div *ngIf="f.email.errors.required">Email is required</div>
+                          <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row mt-4">
+                      <div class="form-group col">
+                        <input type="password" formControlName="password" placeholder=" Enter Password"
+                          class="form-control Login" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                          <div *ngIf="f.password.errors.required">Password is required</div>
+                          <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <a class="Forget_psd" style="display: flex;
+                                    justify-content: end;padding-top: 6%; ">Forgot Password?</a>
+                    </div>
+                    <!-- <div class="d-grid gap-2 mt-4">
+                      <button class="btn btn-primary" id="btton" type="button">Button</button>
+                      </div> -->
+                    <button class="w-full " id="btton" mat-raised-button color="primary" style="background-color: #21AD4B;width: -webkit-fill-available;
+                                    margin-top: 1.5rem ;">Login</button>
+                  </form>
+                </div>
+  
+                <div class="justify-content-center d-flex">
+                  <p>Don’t Have any Account ?
+                   </p>
+                  <a class="Forget_psd px-2" routerLink="/auth/registration"> Signup</a>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>

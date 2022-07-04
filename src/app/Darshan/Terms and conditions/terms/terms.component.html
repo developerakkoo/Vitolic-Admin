@@ -1,0 +1,304 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="d-flex p-1  justify-content-between">
+                <h4 class="Darshan_head pt-3">Terms and conditions </h4>
+
+                <!-- <button class="btn  mb-3  mt-2 creat " routerLink="../add-terms">Add Terms</button> -->
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <div class="card-body">
+                                    <table class="table tab table table-hover">
+
+                                        <thead class="headline">
+                                            <tr>
+                                                <th class="td-sz" scope="col">S.no.</th>
+                                                <th class="td-sz" scope="col">Document no.</th>
+
+                                                <th class="td-sz" scope="col">Terms\conditions </th>
+
+
+                                                <th class="td-sz" scope="col"> Details</th>
+
+
+                                                <th class="td-sz  Actiion_play" scope="col"> Action</th>
+
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="td-sz" scope="col">1</td>
+
+                                                <td class="td-sz" scope="col">****</td>
+                                                <td class="td-sz" scope="col">ABC</td>
+                                                <td class="td-sz" scope="col">vxcvxcv</td>
+                                                <td class="td-sz edt">
+
+                                                    <div class="justify-content-between">
+
+                                                        <a type="button" class="dropbtn" data-toggle="modal"
+                                                            data-target="#staticBackdrop" style="margin-right:6px ;">
+                                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                        </a>
+                                                        <a href="#myModal" class="dropbtn mt-2" data-toggle="modal"><i
+                                                                class="fa fa-trash-o" aria-hidden="true"></i></a>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <!-- <app-meditation-list></app-meditation-list> -->
+
+
+                                        </tbody>
+                                    </table>
+
+                                    <!-- ----------------------------- -->
+                                    <!-- Modal HTML -->
+                                    <div id="myModal" class="modal fade">
+                                        <div class="modal-dialog modal-confirm">
+                                            <div class="modal-content">
+                                                <div class="modal-header flex-column">
+                                                    <div class="icon-box">
+                                                        <i class="material-icons">&#xE5CD;</i>
+                                                    </div>
+                                                    <h4 class="modal-title w-100">Are you sure?</h4>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-hidden="true">&times;</button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Do you really want to delete these records? This process cannot
+                                                        be undone.</p>
+                                                </div>
+                                                <div class="modal-footer justify-content-center">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Cancel</button>
+                                                    <button type="button" class="btn btn-danger">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--------------------------------------------------------------------->
+                                    <!-- Button trigger modal -->
+
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="staticBackdrop" data-backdrop="static"
+                                        data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="staticBackdropLabel">Edit Order
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form [formGroup]="termsEdit" (ngSubmit)="onSubmit()">
+                                                        <div class="row form-row mt-3">
+                                                            <div class="col-6 form-group">
+                                                                <label> Document no.</label>
+                                                                <input type="number" formControlName="Document"
+                                                                    class="form-control control_form "
+                                                                    [ngClass]="{ 'is-invalid': submitted && f.Document.errors }" />
+                                                                <div *ngIf="submitted && f.Document.errors"
+                                                                    class="invalid-feedback">
+                                                                    <div *ngIf="f.Document.errors.required"> Document is
+                                                                        required</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-row mt-3">
+                                                            <div class="col-md-6 form-group">
+                                                                <label>Terms\conditions</label>
+                                                                <input type="text" formControlName="Terms"
+                                                                    class="form-control control_form "
+                                                                    [ngClass]="{ 'is-invalid': submitted && f.Terms.errors }" />
+                                                                <div *ngIf="submitted && f.Terms.errors"
+                                                                    class="invalid-feedback">
+                                                                    <div *ngIf="f.Terms.errors.required">
+                                                                        Terms\conditions Name is required</div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                        </div>
+
+
+
+
+                                                        <div class="row  form-row mt-3 ">
+                                                            <div class="col-md-12 form-group">
+                                                                <label>Long Description</label>
+                                                                <textarea id="story" name="story" class="Str" rows="5"
+                                                                    cols="120" formControlName="Terms"
+                                                                    class="form-control control_form  Long_description"
+                                                                    [ngClass]="{ 'is-invalid': submitted && f.Terms.errors }"></textarea>
+                                                                <div *ngIf="submitted && f.Terms.errors"
+                                                                    class="invalid-feedback">
+                                                                    <div *ngIf="f.Terms.errors.required">Last Name is
+                                                                        required</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn  Save_re sav2" data-dismiss="modal"
+                                                        routerLink="../classes-list">Close</button>
+                                                    <button type="button" class="btn  Save_re">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ----------------------------- -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Basic Alerts end -->
+</div>
+
+
+
+
+
+<!----------------------------------------------->
+
+
+
+<!-- <div class="modal " tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+    <div class="modal-dialog modal-dialog modal-xl p-5" role="document">
+        <div class="modal-content ">
+            <div class="modal-header  Header-Model text-center justify-content-center  ">
+                <h2 class="modal-title tittle_Model ">Add coupon</h2>
+            </div>
+            <form [formGroup]="couponForm" (ngSubmit)="onSubmit()">
+                <div class="modal-body">
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <h3 class="text-center">Coupon Name</h3>
+                        </div>
+                        <div class="col-md-4">
+
+                            <input type="text" formControlName="firstName" class="form-control Control_form" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <h3 class="text-center">Coupon Category</h3>
+                        </div>
+                        <div class="col-md-4">
+
+                            <input type="text" formControlName="firstName" class="form-control Control_form" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <h3 class="text-center">Merchant Name</h3>
+                        </div>
+                        <div class="col-md-4">
+
+                            <input type="text" formControlName="firstName" class="form-control Control_form" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <h3 class="text-center"> Coupon Expiry Date</h3>
+                        </div>
+                        <div class="col-md-4">
+
+                            <input type="text" formControlName="firstName" class="form-control Control_form" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <h3 class="text-center"> Coupon Condition</h3>
+                        </div>
+                        <div class="col-md-4">
+
+                            <input type="text" formControlName="firstName" class="form-control Control_form Control_form" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <h3 class="text-center">Merchant Location</h3>
+                        </div>
+                        <div class="col-md-4">
+
+                            <input type="text" formControlName="firstName" class="form-control Control_form" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-3 mb-3">
+                        <div class="col-md-3 ">
+                            <h3 class="img_text">Image</h3>
+                        </div>
+                        <div class="col-md-4 form-group">
+
+                            <label class="new-button new-button2" for="upload">Choose File</label>
+                            <input id="upload" type="file" name="filename"> <span class="No_file">No File chosen</span>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="Footer_model mb-3 col-md-7">
+
+                    <div class="d-flex justify-content-end mb-5">
+                        <button class="btn Save-res ml-3">Save</button>
+                        <button type="button" class="btn btn-default Save-res" (click)="onCloseHandled()">Close</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div> -->

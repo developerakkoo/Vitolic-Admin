@@ -1,0 +1,132 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <!-- <div class="d-flex p-1  justify-content-between">
+                <h4 class="Darshan_head pt-3">Profile Settings</h4>
+            </div> -->
+            <!-- <div class="card">
+                <div class="card-body p-0"> -->
+            <div class="table-responsive">
+                <div class="card-body p-3">
+                    <div class="row">
+                        <div class="col-md-3 ">
+                            <div class="profileSection">
+                                <div class="icon text-center">
+                                    <img class="profile-image-style" src="{{imageUrl}}" />
+                                </div>
+                                <div class="text-center">
+                                  <label class="custom-file-upload  btn Save_re">
+                                    <input type="file" accept="image/*" (change)="uploadProfile($event)"/>
+                                    Upload
+                                  </label>
+                                    <!-- <input type="file" accept="image/*">
+                                    <button class="btn Save_re mr-1 ml-2">Upload</button> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <!-- <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="p-3">
+                             
+                                <h3 class="mb-5 ">Profile Settings</h3>
+                                <div class="row form-row mt-6">
+                                    <div class="col-md-12">
+                                        <label>Full Name</label>
+                                        <input type="text" formControlName="full_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.full_name.errors }" />
+                                        <div *ngIf="submitted && f.full_name.errors" class="invalid-feedback">
+                                            <div *ngIf="f.full_name.errors.required">Full Name is required
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2"></div>
+                                </div>
+                                <div class="row form-row mt-3">
+                                    <div class="col-md-12">
+                                        <label>Mobile Number</label>
+                                        <input type="text"  formControlName="mobile_number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile_number.errors }" [disabled]="true"/>
+                                        <div *ngIf="submitted && f.mobile_number.errors" class="invalid-feedback">
+                                            <div *ngIf="f.mobile_number.errors.required">Mobile Number is required
+                                            </div>
+                                            <div *ngIf="f.mobile_number.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-row mt-3">
+                                    <div class="col-md-12">
+                                        <label>Email ID</label>
+                                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" [disabled]="true"/>
+                                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                            <div *ngIf="f.email.errors.required">Email is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-row mt-3">
+                                    <div class="col-md-6">
+                                        <label>Country</label>
+                                        <input type="text" formControlName="country" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.country.errors }" />
+                                        <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+                                            <div *ngIf="f.country.errors.required">Country Name is required
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label>Address</label>
+                                        <input type="text" formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+                                        <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                                            <div *ngIf="f.address.errors.required">Address is required</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn  Save_re sav2" routerLink="../e-card-users-list">Cancel</button>
+                                    <button class="btn Save_re mr-1 ml-2">Save Profile</button>
+                                </div>
+                            </form> -->
+                        </div>
+
+
+                        <div class="col-md-4 ">
+                            <!-- <form [formGroup]="changePasswordForm" (ngSubmit)="onChangePasswordSubmit()" class="p-3">
+                                <h3 class="mb-5 ">Change Password</h3>
+                                <div class="row form-row mt-3">
+                                    <div class="col-md-12">
+                                        <label>Old Password</label>
+                                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': changeSubmitted && c.password.errors }" />
+                                        <div *ngIf="changeSubmitted && c.password.errors" class="invalid-feedback">
+                                            <div *ngIf="c.password.errors.required">Old Password is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-row mt-3">
+                                    <div class="col-md-12">
+                                        <label>New Password</label>
+                                        <input type="password" formControlName="new_password" class="form-control" [ngClass]="{ 'is-invalid': changeSubmitted && c.new_password.errors }" />
+                                        <div *ngIf="changeSubmitted && c.new_password.errors" class="invalid-feedback">
+                                            <div *ngIf="c.new_password.errors.required">New Password is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-row mt-3">
+                                    <div class="col-md-12">
+                                        <label>Confirm Password</label>
+                                        <input type="password" formControlName="confirm_password" class="form-control" [ngClass]="{ 'is-invalid': changeSubmitted && c.confirm_password.errors }" />
+                                        <div *ngIf="changeSubmitted && c.confirm_password.errors" class="invalid-feedback">
+                                            <div *ngIf="c.confirm_password.errors.required">Confirm Password</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn Save_re mr-1 ml-2">Change Password</button>
+                                </div>
+                            </form> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div>
+            </div> -->
+        </div>
+    </section>
+</div>

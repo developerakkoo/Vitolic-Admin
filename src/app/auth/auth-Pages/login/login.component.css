@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.Forget_psd {
+  color: #1e9ff2;
+}
+
+.Login_font {
+  font-weight: 600;
+  line-height: revert;
+  font-size: 30px;
+}
+
+.Login {
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.font_logi {
+  color: #21AD4B;
+}
+
+.Border_over {
+  border: none;
+}
+
+#btton {
+  margin-bottom: 10%;
+  padding: 4%;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.logo-image img {
+  padding-bottom: 20%;
+  padding-top: 10%;
+}
+
+.logo-image {
+  -webkit-box-shadow: 1px 5px 12px #6e6d6d !important;
+          box-shadow: 1px 5px 12px #6e6d6d !important;
+}
+
+.Login_rows {
+  top: 15%;
+}
+/*# sourceMappingURL=login.component.css.map */

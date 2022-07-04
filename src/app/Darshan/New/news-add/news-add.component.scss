@@ -1,0 +1,172 @@
+.img_file {
+    margin-top: 16%;
+}
+
+.sav2 {
+    padding: 0.6rem 2.6rem;
+}
+
+// .Save_re {
+//     padding: 0.5rem 2rem;
+//     border-radius: 10rem;
+//     color: #ffff;
+//     font-weight: 500;
+//     background-color: #445C8F;
+// }
+
+.dropdown-img-select {
+  position: relative !important;
+  height:10em !important;
+  width:10em !important;
+  background-repeat: no-repeat !important;
+}
+
+#dLabel {
+  width: 240px;
+height: 40px;
+border-radius: 4px;
+background-color: #fff;
+border: solid 1px #cccccc;
+text-align: left;
+padding: 7.5px 15px;
+color: #ccc;
+letter-spacing: 0.7px;
+margin-top: 25px;
+
+
+}
+
+.caret {
+  float: right;
+  margin-top: 9px;
+  display: block;
+}
+
+.dropdown {
+  position:relative;
+  height:auto
+}
+
+.dropdown-menu {
+  width: 240px;
+  height:30em;
+  padding: 0;
+  margin: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  overflow: scroll;
+}
+
+.dropdown button:hover, .dropdown button:focus {
+  border: none;
+  outline: 0;
+}
+
+.dropdown.open button#dLabel {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+  border: solid 1px #666;
+  border-bottom: none;
+}
+
+.dropdown.open ul {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+  border: solid 1px #666;
+  border-top: none;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.dropdown-menu li {
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 7.5px 15px;
+  border-top: solid 1px #f3f3f3;
+}
+
+.country-dropdown-select-data {
+  height:1em !important;
+  width:2em !important
+}
+
+.dropdown-menu li:hover {
+background-color: #ccc;
+}
+
+.profile-image-style {
+
+  height:9em !important
+}
+.long {
+    margin-top: -12%;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    // width: 250px;
+    // border: 1px solid !important;
+    border-radius: 8px;
+    color: #ADBCCE;
+    height: 40px;
+}
+
+.option {
+    // padding: 0 30px 0 10px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    background: #ffff;
+    // border-top: #222 solid 1px;
+    position: absolute;
+    top: 0;
+    border: 1px solid #CACFE7;
+    padding-left: 15px;
+    border-radius: 5px;
+    width: 100%;
+    pointer-events: none;
+    order: 2;
+    z-index: 1;
+    transition: background .4s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.option:hover {
+    background: #DDEAF3;
+}
+
+.select:focus .option {
+    position: relative;
+    pointer-events: all;
+}
+
+.input {
+    opacity: 0;
+    position: absolute;
+    left: -99999px;
+}
+
+input:checked+label {
+    order: 1;
+    z-index: 2;
+    background: rgb(255, 254, 254);
+    position: relative;
+}
+
+svg {
+    position: absolute;
+    width: 21px;
+    color: #ADBCCE;
+    top: 20%;
+    right: 14px;
+    z-index: 2;
+    fill: currentColor;
+    transition: transform 0.1s;
+}

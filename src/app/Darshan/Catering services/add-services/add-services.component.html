@@ -1,0 +1,126 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="d-flex p-1  justify-content-between">
+                <h4 class="Darshan_head pt-3">Add Services</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <div class="card-body p-3">
+                                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="p-3">
+                                        <div class="row form-row mt-3 mb-2">
+                                            <div class="form-group col-md-4">
+                                                <label> Name</label>
+                                                <input type="text" formControlName="Name"
+                                                    class="form-control control_form"
+                                                    [ngClass]="{ 'is-invalid': submitted && f.Name.errors }" />
+                                                <div *ngIf="submitted && f.Name.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.Name.errors.required"> Name is required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-row mt-3 mb-2">
+                                            <div class="form-group col-md-4">
+                                                <label> Purpose</label>
+                                                <input type="text" formControlName="Purpose"
+                                                    class="form-control control_form"
+                                                    [ngClass]="{ 'is-invalid': submitted && f.Purpose.errors }" />
+                                                <div *ngIf="submitted && f.Purpose.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.Purpose.errors.required">Purpose is required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-row mt-4">
+                                            <div class="form-group col-md-3">
+                                                <label> Date</label>
+                                                <input type="date" formControlName="date"
+                                                    class="form-control control_form"
+                                                    [ngClass]="{ 'is-invalid': submitted && f.date.errors }" />
+                                                <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.date.errors.required">Date is required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-row mt-3 mb-2">
+
+                                            <div class="form-group col-md-2">
+                                                <label> Number Of Persons</label>
+                                                <input type="number" formControlName="Numbepersons"
+                                                    class="form-control control_form"
+                                                    [ngClass]="{ 'is-invalid': submitted && f.Numbepersons.errors }" />
+                                                <div *ngIf="submitted && f.Numbepersons.errors"
+                                                    class="invalid-feedback">
+                                                    <div *ngIf="f.Numbepersons.errors.required">Number Of Persons is
+                                                        required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-row mt-4">
+
+                                            <div class="col-md-2">
+                                                <p>Delivery Type</p>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <input type="checkbox" id="1" class="Check_box"><label
+                                                    for="1">Delivery</label>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <input type="checkbox" id="2" class="Check_box"><label
+                                                    for="2">Pickup</label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-row mt-4">
+                                            <div class="form-group col-md-5">
+                                                <label> Delivery Address</label>
+                                                <input type="text" formControlName="deyaddress"
+                                                    class="form-control control_form"
+                                                    [ngClass]="{ 'is-invalid': submitted && f.deyaddress.errors }" />
+                                                <div *ngIf="submitted && f.deyaddress.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.deyaddress.errors.required"> Delivery Address is
+                                                        required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-row mt-4">
+                                            <div class="form-group col-md-5">
+                                                <label> Request Menu</label>
+                                                <input type="text" formControlName="Requestmenu"
+                                                    class="form-control control_form"
+                                                    [ngClass]="{ 'is-invalid': submitted && f.Requestmenu.errors }" />
+                                                <div *ngIf="submitted && f.Requestmenu.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.Requestmenu.errors.required">Request Menu Name is
+                                                        required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-row mt-3 mb-2">
+
+                                            <div class="form-group col-md-2">
+                                                <label> Total Payment</label>
+                                                <input type="number" formControlName="payment"
+                                                    class="form-control control_form"
+                                                    [ngClass]="{ 'is-invalid': submitted && f.payment.errors }" />
+                                                <div *ngIf="submitted && f.payment.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.payment.errors.required">payment is required</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center mt-5">
+                                            <button type="button" class="btn  Save_re "
+                                                routerLink="../catering-service-list">Cancel</button>
+                                            <button class="btn Save_re mr-1 ml-2 sav2">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

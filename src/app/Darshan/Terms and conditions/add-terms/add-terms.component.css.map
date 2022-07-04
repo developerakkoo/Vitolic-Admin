@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACN,UAAU,EAAE,GAAG;CAClB;;AAED,AAAA,QAAQ,CAAC;EAIL,WAAW,EAAE,GAAG;EAEhB,UAAU,EAAE,GAAG;CAClB;;AAED,AAAA,KAAK,CAAC;EACF,OAAO,EAAE,aAAa;CACzB;;AAED,AAAA,KAAK,CAAC;EACF,UAAU,EAAE,IAAI;CACnB",
+    "sources": [
+        "add-terms.component.scss"
+    ],
+    "names": [],
+    "file": "add-terms.component.css"
+}

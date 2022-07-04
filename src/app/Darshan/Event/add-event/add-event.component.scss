@@ -1,0 +1,112 @@
+
+
+
+
+.ImageAli{
+    text-align: center;
+    margin-top: 4%;
+}
+
+
+
+.new-button2 {
+    margin-top: 5%;
+}
+
+.uplod_btn {
+    margin-top: 10%;
+}
+
+
+
+
+
+.Save_re {
+    background-color: #FCAA2D;
+    padding: 9px 25px;
+    border: none;
+    font-size: 13px;
+    margin-top: 4%;
+    color: #ffff;
+    box-shadow: 0px 10px 18px rgb(62 57 107 / 20%);
+    border-radius: 21px;
+}
+button.btn.Save_re.sav2 {
+    padding: 9px 41px;
+}
+
+
+.Str {
+    display: block;
+}
+.form-row1{
+    display: inline-block;
+    width: 100%;
+}
+.form-group1{
+    float: left;
+    width: 20%;
+}
+.form-group1.event {
+    margin-top: -1%;
+}
+.breadcrumb {
+    list-style: none;
+    background: none;
+    margin: 0 0 25px;
+    padding-left: 10px;
+    li {
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-15) / var(--unnamed-line-spacing-23) var(--unnamed-font-family-poppins);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-000000);
+        text-align: left;
+        // text-transform: capitalize;
+        opacity: 0.5;
+        display: inline;
+        padding: 0 15px 0 0;
+        a {
+            text-decoration: none;
+            color: var(--unnamed-color-000000);
+            &:after {
+                content: "/";
+                margin-left: 15px;
+            }
+        }
+    }
+}
+@media screen and (min-device-width: 767px) and (max-device-width: 991px) { 
+    .form-group1{
+        // float: left;
+         width: 100%;
+     }
+}
+@media screen and(min-device-width: 576px) and (max-device-width: 766px)  {
+    .form-group1{
+       // float: left;
+        width: 100%;
+    }
+}
+@media screen and(min-device-width: 320px) and (max-device-width: 575px)  {
+    .form-group1{
+       // float: left;
+        width: 100%;
+    }
+    .form-row {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+}
+@media screen and(min-device-width: 280px) and (max-device-width: 319px)  {
+    .form-group1{
+       // float: left;
+        width: 100%;
+    }
+    .form-row {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+    button.btn.Save_re.sav2 {
+        padding: 9px 31px;
+    }
+}
+

@@ -1,0 +1,178 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+ 
+            <div class="d-flex p-1  justify-content-between">
+                <h4 class="Darshan_head pt-3">User</h4>
+                <!-- <app-modelopen class="mt-3"></app-modelopen> -->
+                <!-- <app-add-meditation></app-add-meditation> -->
+                <!-- (click)="openModal()" -->
+                <!-- <button class="btn  mb-3  mt-2 creat" routerLink="../add-event">Add Product</button> -->
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <div class="card-body">
+
+
+                                    <table class="table tab table table-hover">
+
+                                        <thead class="headline">
+                                            <tr>
+                                                <th class="td-sz" scope="col">S.no.</th>
+                                                <th class="td-sz" scope="col">Image</th>
+                                                <th class="td-sz" scope="col">Product Name</th>
+                                                
+                                                <th class="td-sz" scope="col"> </th>
+                                                <th class="td-sz" scope="col"> Price</th>
+                                                <th class="td-sz" scope="col"> </th>
+                                                <th class="td-sz" scope="col"> </th>
+
+
+                                                <th class="justify-content-end" scope="col">Action</th>
+
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="td-sz" scope="col"> 1</td>
+                                                <td class="td-sz" scope="col">
+                                                 <div>
+                                                    <img src="../../../../assets/images/1.png" class="img-fluid Tab"
+                                                    alt="...">
+                                                 </div>
+                                                   
+                                                </td>
+                                                <td class="td-sz" scope="col">Simple Black Clock</td>
+                                                <td class="td-sz File" scope="col"> 
+                                                </td>
+                                                <td class="td-sz " scope="col"> $3.00</td>
+                                                <td class="td-sz " scope="col"></td>
+                                                <td class="td-sz " scope="col">
+                                                  
+                                                </td>
+                                                <td class="td-sz edt">
+
+                                                    <div class="justify-content-between" style="    margin-top: 28%;">
+                                                        
+                                                        <a type="button" class="dropbtn" data-toggle="modal" data-target="#exampleModalCenter" style="margin-right:7px ;">
+                                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                        </a>
+                                                        <a href="#myModal" class="dropbtn mt-2" data-toggle="modal"><i
+                                                                class="fa fa-trash-o" aria-hidden="true"></i></a>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+
+
+
+
+
+                                        </tbody>
+                                    </table>
+
+
+                                  <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title Darshan_head " id="exampleModalLongTitle"> Edit User </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <!-- <form [formGroup]="UserForm" (ngSubmit)="onSubmit()">
+                <div class="row form-row mt-3">
+                    <div class="col form-group">
+                        <label>Product Name</label>
+                        <input type="text" formControlName="fName" placeholder="Event Name"
+                            class="form-control control_form "
+                            [ngClass]="{ 'is-invalid': submitted && f.fName.errors }" />
+                        <div *ngIf="submitted && f.fName.errors" class="invalid-feedback">
+                            <div *ngIf="f.fName.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row form-row mt-3">
+                    <div class="col-md-5">
+                        <label>Price</label>
+                        <input type="peice" formControlName="price" class="form-control control_form "
+                            [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                        <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                            <div *ngIf="f.price.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                 
+                
+                <div class="row form-row mt-4">
+                    <div class="col-md-3 ImageAli ">
+                        <p class="text-center">Images</p>
+
+                       
+                    </div>
+                    <div class="col-md-8">
+                        <label class="new-button new-button2 " for="upload">Choose File</label>
+                        <input id="upload" type="file" name="filename"> <span class="No_file">No File chosen</span>
+                    </div>
+                </div>
+               
+               
+           
+         
+               
+            </form> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn Save_re sav2" data-dismiss="modal">Close</button>
+          <button type="button" class="btn  Save_re sav2">Save </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+                                    <!-- Modal HTML -->
+                                    <div id="myModal" class="modal fade">
+                                        <div class="modal-dialog modal-confirm">
+                                            <div class="modal-content">
+                                                <div class="modal-header flex-column">
+                                                    <div class="icon-box">
+                                                        <i class="material-icons">&#xE5CD;</i>
+                                                    </div>
+                                                    <h4 class="modal-title w-100">Are you sure?</h4>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-hidden="true">&times;</button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Do you really want to delete these records? This process cannot
+                                                        be undone.</p>
+                                                </div>
+                                                <div class="modal-footer justify-content-center">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Cancel</button>
+                                                    <button type="button" class="btn btn-danger">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

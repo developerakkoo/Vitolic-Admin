@@ -1,0 +1,32 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+  <a class="nav-link1" data-widget="pushmenu" role="button">
+    <img src="../../../assets/images/logo.png" class="Logo">
+
+  </a>
+
+  <div class="sidebar">
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="true">
+        <li class="nav-item" *ngFor="let item of sidenavData">
+          <a (click)="redirectFunction(item)" class="nav-link {{item.isActive ? 'dropdown-active' : 'dropdown-inactive'}}">
+            <span> <img src={{item.image}}></span>
+            <p class="nav-txt">
+              {{item.name}}
+              <i *ngIf="item.icon" class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview" *ngIf="item.icon">
+            <li class="nav-item" *ngFor="let child of item.children">
+              <a  (click)="redirectChildFunction(child)" class="nav-link {{isChildActiveLink === child.link ? 'dropdown-active' : 'dropdown-inactive'}}">
+                <p class="nav-txt">{{child.name}}</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul> 
+    </nav>
+  </div>
+</aside>
+

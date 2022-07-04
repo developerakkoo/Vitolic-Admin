@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AA+JA,AAAA,MAAM,CAAC;EACH,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,GAAG;CACnB",
+    "sources": [
+        "event-donation-list.component.scss"
+    ],
+    "names": [],
+    "file": "event-donation-list.component.css"
+}
