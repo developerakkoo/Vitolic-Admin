@@ -7,7 +7,7 @@
                 <!-- <app-modelopen class="mt-3"></app-modelopen> -->
                 <!-- <app-add-meditation></app-add-meditation> -->
                 <!-- (click)="openModal()" -->
-                <button class="btn  mb-3  mt-2 creat" routerLink="../add-event">Add Product</button>
+                <button class="btn  mb-3  mt-2 creat" routerLink="../add-product">Add Product</button>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -17,7 +17,7 @@
                                 <div class="card-body">
 
 
-                                    <table class="table tab table table-hover">
+                                    <table class="table tab table table-hover" >
 
                                         <thead class="headline">
                                             <tr>
@@ -36,18 +36,17 @@
                                         </thead>
 
 
-                                        <tbody>
-                                            <tr>
+                                        <tbody >
+                                            <tr *ngFor="let item of list ">
                                                 <td class="td-sz" scope="col"> 1</td>
                                                 <td class="td-sz" scope="col">
                                                     <img src="../../../../assets/images/1.png" class="img-fluid Tab"
                                                         alt="...">
                                                 </td>
-                                                <td class="td-sz" scope="col">Simple Black Clock</td>
-                                                <td class="td-sz File" scope="col"> established fact that a be
-                                                    distracted
+                                                <td class="td-sz" scope="col">{{item._id}}</td>
+                                                <td class="td-sz File" scope="col"> {{item.title}}}
                                                 </td>
-                                                <td class="td-sz " scope="col"> $3.00</td>
+                                                <td class="td-sz " scope="col">{{item.price}}</td>
                                                 <td class="td-sz " scope="col">$16.00</td>
                                                 <td class="td-sz " scope="col">
                                                     <select class="form-control" id="exampleFormControlSelect1">

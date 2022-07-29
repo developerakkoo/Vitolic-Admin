@@ -8,6 +8,7 @@ import {
 } from '@angular/forms';
 import { CustomValidators } from 'ng2-validation';
 import { Router } from '@angular/router';
+import { AuthservicService } from '../authServic/authservic.service';
 
 
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     fb: FormBuilder,
+    private api: AuthservicService,
 
   
   ) {}

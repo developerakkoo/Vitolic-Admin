@@ -8,7 +8,7 @@ import {
   ActivatedRoute,
   RoutesRecognized,
 } from '@angular/router';
-import { Location } from '@angular/common';
+  import { Location } from '@angular/common';
 
 
 @Component({

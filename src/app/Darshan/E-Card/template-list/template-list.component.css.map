@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACb,OAAO,EAAE,SAAS;EAClB,aAAa,EAAE,GAAG;EAClB,aAAa,EAAE,EAAE;CACpB;;AAED,AAAA,CAAC,AAAA,IAAI,AAAA,OAAO,AAAA,KAAK,CAAC;EACd,OAAO,EAAE,QAAQ;CACpB",
-    "sources": [
-        "template-list.component.scss"
-    ],
-    "names": [],
-    "file": "template-list.component.css"
-}

@@ -192,10 +192,19 @@ let sidebarData: any = [
   // },
    {
     name: 'Subscription',
-    link: '/admin/subscription',
+    link: '',
     image: '../../../../assets/images/sub admin 2.svg',
-    children: [],
-    icon: false,
+    children: [
+      {
+        name: 'Monthly Subscription ',
+        link: '/admin/month-subscription',
+      },
+      {
+        name: 'Pick Of Your Choice',
+        link: '/admin/pick-choice',
+      },
+    ],
+    icon: true,
     isActive: false,
   },
   // {

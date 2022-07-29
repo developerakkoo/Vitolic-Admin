@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,CAAC,AAAA,IAAI,AAAA,OAAO,AAAA,KAAK,CAAC;EACd,OAAO,EAAE,QAAQ;CACpB",
-    "sources": [
-        "e-card-users-list.component.scss"
-    ],
-    "names": [],
-    "file": "e-card-users-list.component.css"
-}

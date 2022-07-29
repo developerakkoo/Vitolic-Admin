@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ServiceService } from '../service/service.service';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -8,7 +9,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ProductComponent implements OnInit {
   productForm:any= FormGroup;
   submitted = false;
-  constructor(private formBuilder:FormBuilder) { }
+  list:any;
+  // proList: any = [];
+  constructor(private formBuilder:FormBuilder,private api:ServiceService) { 
+    this.api.ProductList().subscribe(status =>{
+        console.warn(status)
+        this.list.status;
+      })
+  
+  }
 
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
@@ -20,7 +29,10 @@ export class ProductComponent implements OnInit {
       confirmPassword: ['', Validators.required],
       acceptTerms: [false, Validators.requiredTrue]
   }, );
+
+  
   }
+
 
 
   get f() { return this.productForm.controls; }
@@ -41,5 +53,15 @@ export class ProductComponent implements OnInit {
       this.submitted = false;
       this.productForm.reset();
   }
+  // this.api.ProductList().subscribe(data =>{
+  //   console.warn(data)
+  //   this.list.data;
+  // })
+
+
+   /* Student list API */
+/* Earning list API */
+
+
 
 }

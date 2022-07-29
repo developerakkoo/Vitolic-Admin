@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,aAAa,CAAC;EACV,SAAS,EAAE,IAAI;CAElB;;AAED,AAAA,MAAM,CAAC;EACH,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,GAAG;CACnB",
-    "sources": [
-        "event-booking-request.component.scss"
-    ],
-    "names": [],
-    "file": "event-booking-request.component.css"
-}

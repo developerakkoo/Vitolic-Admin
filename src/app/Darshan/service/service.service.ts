@@ -7,59 +7,42 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ServiceService {
   token: any = localStorage.getItem('authtoken');
+
   constructor(private http: HttpClient) { }
 
+  ProductList() {
+    // let headers: any = new HttpHeaders({
+    //   'Content-Type': 'application/json',
+    //   Authorization: this.token,
+    // });
+    // return this.http
+    //   .get(`${environment.apiBaseUrl}${environment.apiPath}productlistList`, {
+    //     headers,
+    //   })
+    //   .pipe(map((res) => <any>res));
+    let  url = "http://54.159.158.232/products";
+    return this.http.get(url);
+  
 
-  changePassword(data: any) {
-    let headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: this.token,
-    });
-    return this.http
-      .post(
-        `${environment.apiBaseUrl}${environment.apiPath}changepassword`,
-        data,
-        { headers }
-      )
-      .pipe(map((res: any) => <any>res));
   }
 
-  liveDarshanList() {
-    let headers: any = new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: this.token,
-    });
-    return this.http
-      .get(`${environment.apiBaseUrl}${environment.apiPath}darshanTimingList`, {
-        headers,
-      })
-      .pipe(map((res) => <any>res));
-  }
 
-  addDarshan(data: any) {
-    let headers: any = new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: this.token,
-    });
-    return this.http
-      .post(
-        `${environment.apiBaseUrl}${environment.apiPath}addDarshanTiming`,
-        data,
-        { headers }
-      )
-      .pipe(map((res: any) => <any>res));
-  }
+  SubscriptionList() {
+let url ="http://54.159.158.232/api-docs/#/subscription/get_subscription";
+return this.http.get(url);
 
-  adminProfile() {
-    let headers: any = new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: this.token,
-    });
-    return this.http
-      .get(`${environment.apiBaseUrl}${environment.apiPath}adminProfile`, {
-        headers,
-      })
-      .pipe(map((res) => <any>res));
+
+
+
+    // let headers: any = new HttpHeaders({
+    //   'Content-Type': 'application/json',
+    //   Authorization: this.token,
+    // });
+    // return this.http
+    //   .get(`${environment.apiBaseUrl}${environment.apiPath}adminProfile`, {
+    //     headers,
+    //   })
+    //   .pipe(map((res) => <any>res));
   }
 
   courseList() {

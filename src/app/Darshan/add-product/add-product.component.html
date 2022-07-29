@@ -1,0 +1,123 @@
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="d-flex p-1  justify-content-between">
+                <h4 class="Darshan_head pt-3">Add Product</h4>
+            </div>
+            <div class="card card_back p-3">
+                <form [formGroup]="AddProductForm" (ngSubmit)="onSubmit()" class="p-3">
+
+                    <div class="row form-row mt-5">
+                        <div class="form-group col-3">
+                            <label>Title</label>
+                            <select formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                                <option value=""></option>
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Miss">Miss</option>
+                                <option value="Ms">Ms</option>
+                            </select>
+                            <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                                <div *ngIf="f.title.errors.required">Title is required</div>
+                            </div>
+                            </div>
+
+                       
+
+
+
+                    </div>
+                    <div class="row form-row mt-5">
+                        <div class="col-md-5 form-group">
+                            <label>Price</label>
+                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4 form-group">
+                            <label>DiscountedPrice</label>
+                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row form-row mt-5">
+                        <div class="col-md-5 form-group">
+                            <label>inStock</label>
+                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4 form-group">
+                            <label>Category </label>
+                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row form-row mt-5">
+                        <div class="col-md-5 form-group">
+                            <label>Stock</label>
+                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4 form-group">
+                            <label>units </label>
+                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            </div>
+
+                        </div>
+                        <div>
+                            <label>imageUrl</label>
+                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row  form-row mt-5 ">
+                   
+
+                        <!-- <div class="col-md-8">
+                            <ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
+                        </div> -->
+
+
+                    </div>
+
+
+
+                    <div class="d-flex justify-content-start">
+                        <button type="button" class="btn  Save_re " routerLink="../terms">Cancel </button>
+                        <button class="btn btn-primary mr-1 Save_re sav2 ml-3">Save </button>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</div>
