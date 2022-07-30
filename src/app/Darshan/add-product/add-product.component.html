@@ -30,7 +30,7 @@
                     <div class="row form-row mt-5">
                         <div class="col-md-5 form-group">
                             <label>Price</label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <input type="text" formControlName="price" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
                             <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
                                 <div *ngIf="f.description.errors.required">First Name is required</div>
                             </div>
@@ -39,7 +39,7 @@
 
                         <div class="col-md-4 form-group">
                             <label>DiscountedPrice</label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <input type="text" formControlName="discountedprice" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
                             <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
                                 <div *ngIf="f.description.errors.required">First Name is required</div>
                             </div>
@@ -52,7 +52,7 @@
                     <div class="row form-row mt-5">
                         <div class="col-md-5 form-group">
                             <label>inStock</label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <input type="text" formControlName="instock" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
                             <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
                                 <div *ngIf="f.description.errors.required">First Name is required</div>
                             </div>
@@ -61,7 +61,7 @@
 
                         <div class="col-md-4 form-group">
                             <label>Category </label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <input type="text" formControlName="category" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
                             <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
                                 <div *ngIf="f.description.errors.required">First Name is required</div>
                             </div>
@@ -73,27 +73,24 @@
                     <div class="row form-row mt-5">
                         <div class="col-md-5 form-group">
                             <label>Stock</label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <input type="text" formControlName="stock" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
                             <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
-                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                                <div *ngIf="f.description.errors.required">Stock is required</div>
                             </div>
 
                         </div>
 
                         <div class="col-md-4 form-group">
                             <label>units </label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                            <input type="text" formControlName="units" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
                             <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
                                 <div *ngIf="f.description.errors.required">First Name is required</div>
                             </div>
 
                         </div>
-                        <div>
+                        <div class="col-md-4 form-group">
                             <label>imageUrl</label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
-                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
-                                <div *ngIf="f.description.errors.required">First Name is required</div>
-                            </div>
+                            <input type="file" name="file" (change)="fileEvent($event)" id="">
 
                         </div>
 
@@ -112,7 +109,7 @@
 
                     <div class="d-flex justify-content-start">
                         <button type="button" class="btn  Save_re " routerLink="../terms">Cancel </button>
-                        <button class="btn btn-primary mr-1 Save_re sav2 ml-3">Save </button>
+                        <button class="btn btn-primary mr-1 Save_re sav2 ml-3" >Save </button>
 
                     </div>
                 </form>

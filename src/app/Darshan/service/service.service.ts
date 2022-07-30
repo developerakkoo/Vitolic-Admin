@@ -28,7 +28,7 @@ export class ServiceService {
 
 
   SubscriptionList() {
-let url ="http://54.159.158.232/api-docs/#/subscription/get_subscription";
+let url ="http://54.159.158.232/subscription/get_subscription";
 return this.http.get(url);
 
 

@@ -26,13 +26,6 @@ export class CouponComponent implements OnInit {
   onSubmit() {
       this.submitted = true;
 
-      // stop here if form is invalid
-      if (this.productForm.invalid) {
-          return;
-      }
-
-      // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.productForm.value, null, 4));
   }
 
   onReset() {

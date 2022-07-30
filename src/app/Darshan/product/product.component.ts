@@ -12,9 +12,13 @@ export class ProductComponent implements OnInit {
   list:any;
   // proList: any = [];
   constructor(private formBuilder:FormBuilder,private api:ServiceService) { 
-    this.api.ProductList().subscribe(status =>{
-        console.warn(status)
-        this.list.status;
+    this.api.ProductList().subscribe((status:any) =>{
+        console.log(status['products']);
+        this.list = status['products'];
+        
+      },(error)=>{
+        console.log(error);
+        
       })
   
   }

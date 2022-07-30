@@ -14,18 +14,19 @@ export class AddProductComponent implements OnInit {
   ngOnInit(): void {
     this.AddProductForm = this.formBuilder.group({
       title: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
-      acceptTerms: [false, Validators.requiredTrue]
+      
   }, {
      
   });
   }
   get f() { return this.AddProductForm.controls; }
 
+
+  fileEvent(event:any){
+    let file: File = event.target.files[0];
+    console.log(file);
+    
+  }
   onSubmit() {
       this.submitted = true;
 
