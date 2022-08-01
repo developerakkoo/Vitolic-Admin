@@ -13,32 +13,7 @@ export class MonthSubscriptionComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-  //   this.EditmonthlyForm = this.formBuilder.group({
-  //     // title: ['', Validators.required],
-  //     // Invoice: ['', Validators.required],
-  //     // firstName: ['', Validators.required],
-  //     // email: ['', [Validators.required, Validators.email]],
-  //     // password: ['', Validators.required],
-  //     // Address: ['', Validators.required],
-  //     // Deliveryf: ['',Validators.required],
-  //     // Deliveryp :['',Validators.required],
-     
-  // }, {
-  //     // validator: MustMatch('password', 'confirmPassword')
-  // });
-//   this.EditmonthlyForm = this.formBuilder.group({
-//     title: ['', Validators.required],
-//     Invoice: ['', Validators.required],
-//     firstName: ['', Validators.required],
-//     Address: ['', Validators.required],
-//     email: ['', [Validators.required, Validators.email]],
-//     Deliveryf: ['', Validators.required],
-//     Deliveryp: ['', Validators.required],
-//     Phone: ['', Validators.required],
-    
-// }, {
-  
-// });
+
 this.EditmonthlyForm = this.formBuilder.group({
   title: ['', Validators.required],
   firstName: ['', Validators.required],
