@@ -27,12 +27,25 @@ export class OderComponent implements OnInit {
      
   });
   
-  this.api.ProductList()
+  this.api.OrderList()
   .subscribe((status:any) =>{
     console.log(status)
-    this.list = status['products'];
+    this.list = status['order'];
   });
 
+  }
+  
+  delete(itemid:any){
+    console.log(itemid);
+    
+    this.http.delete(environment.apiBaseUrl + '/order' + itemid)
+    .subscribe((response:any) => {
+      console.log(response);
+      
+    },(error:any) => {
+      console.log(error);
+      
+    })
   }
   get f() { return this.orderEdit.controls; }
 

@@ -8,10 +8,10 @@ import {ServiceService} from '../service/service.service'
 export class SubscriptionComponent implements OnInit {
   list:any;
   constructor(private api:ServiceService) { 
-    this.api.SubscriptionList().subscribe(status =>{
-      console.warn(status)
-      this.list.status;
-    })
+    // this.api.SubscriptionList().subscribe(status =>{
+    //   console.warn(status)
+    //   this.list.status;
+    // })
   }
 
   ngOnInit(): void {
