@@ -59,6 +59,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddProductComponent } from './add-product/add-product.component';
 import { RefundComponent } from './refund/refund.component';
 import { CartComponent } from './cart/cart.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import{NgxEchartsModule} from 'ngx-echarts';
 @NgModule({
   declarations: [
@@ -122,6 +124,7 @@ import { CartComponent } from './cart/cart.component';
     MatToolbarModule,
     MatPaginatorModule,
     MatFormFieldModule,
+    NgxSpinnerModule,
     MatSelectCountryModule.forRoot('de'),
 
   ],

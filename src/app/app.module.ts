@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +20,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { ShareComponent } from './common/share/share.component';
 import { AuthenticationService } from './authguard/authentication.service';
+
+
 @NgModule({
   declarations: [AppComponent, HeaderComponent, SidebarComponent, ShareComponent],
   imports: [
@@ -34,13 +36,14 @@ import { AuthenticationService } from './authguard/authentication.service';
     NgxChartsModule,
     NgChartsModule,
     NgbModule,
+   
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts')
     })
   ],
   providers: [
     AuthenticationService,
-  
+    
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy,
