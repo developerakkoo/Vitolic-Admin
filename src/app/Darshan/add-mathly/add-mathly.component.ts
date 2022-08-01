@@ -16,12 +16,18 @@ export class AddMathlyComponent implements OnInit {
   ngOnInit(): void {
        // this.editor = new Editor();
        this. monthlyForm = this.formBuilder.group({
-        document: ['', Validators.required],
-        date: ['', Validators.required],
-        description: ['', Validators.required],
-        // email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(6)]],
-        confirmPassword: ['', Validators.required],
+        title: ['', Validators.required],
+        firstName: ['', Validators.required],
+        lastName: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        Address: ['', Validators.required],
+        Invoice: ['',Validators.required],
+        Phone: ['',Validators.required],
+        // password: ['', [Validators.required, Validators.minLength(6)]],
+        Deliveryf: ['', Validators.required],
+            Deliveryp: ['', Validators.required],
+       
+       
         
     }, {
       

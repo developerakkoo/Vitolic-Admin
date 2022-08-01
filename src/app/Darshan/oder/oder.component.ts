@@ -13,12 +13,12 @@ export class OderComponent implements OnInit {
   ngOnInit(): void {
     this.orderEdit = this.formBuilder.group({
       title: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
-      acceptTerms: [false, Validators.requiredTrue]
+      Name: ['', Validators.required],
+      Date: ['', Validators.required],
+      Price: ['', Validators.required, ],
+      Orderid: ['', Validators.required],
+      Product: ['', Validators.required],
+      
   }, {
      
   });
@@ -26,20 +26,19 @@ export class OderComponent implements OnInit {
   get f() { return this.orderEdit.controls; }
 
   onSubmit() {
-    this.submitted = true;
+      this.submitted = true;
 
-    // stop here if form is invalid
-    if (this.orderEdit.invalid) {
-        return;
-    }
+      // stop here if form is invalid
+      if (this.orderEdit.invalid) {
+          return;
+      }
 
-    // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.orderEdit.value, null, 4));
-}
+      // display form values on success
+      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.orderEdit.value, null, 4));
+  }
 
-onReset() {
-    this.submitted = false;
-    this.orderEdit.reset();
-}
-
+  onReset() {
+      this.submitted = false;
+      this.orderEdit.reset();
+  }
 }

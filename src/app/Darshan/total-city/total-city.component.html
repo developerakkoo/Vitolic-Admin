@@ -80,9 +80,9 @@
                                     <div id="myModal" class="modal fade">
                                         <div class="modal-dialog modal-confirm">
                                             <div class="modal-content">
-                                                <div class="modal-header flex-column">
+                                                <div class="modal-header   flex-column">
                                                     <div class="icon-box">
-                                                        <i class="material-icons">&#xE5CD;</i>
+                                                        <i class="material-icons" >&#xE5CD;</i>
                                                     </div>
                                                     <h4 class="modal-title w-100">Are you sure?</h4>
                                                     <button type="button" class="close" data-dismiss="modal"
@@ -113,16 +113,27 @@
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title Darshan_head" id="exampleModalLongTitle">Add City</h5>
+        <div class="modal-header header_Modal">
+          <h5 class="modal-title " id="exampleModalLongTitle">Add City</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true" class="text-light">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            <form [formGroup]="formGrp" novalidate class="formCls">
-                <div class="form-group col-5">
+            <form [formGroup]="totalCity" (ngSubmit)="onSubmit()" class="formCls">
+                <!-- <div class="form-group col-5">
                     <label>City</label>
+                    <select formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+                        <option value=""></option>
+                        <option value="indore">Indore</option>
+                        <option value="Pune">Pune</option>
+                   
+                    </select>
+                    <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+                        <div *ngIf="f.title.errors.required">Title is required</div>
+                    </div>
+                    </div> -->
+                    <label>Title</label>
                     <select formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
                         <option value=""></option>
                         <option value="Mr">Mr</option>
@@ -133,7 +144,7 @@
                     <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
                         <div *ngIf="f.title.errors.required">Title is required</div>
                     </div>
-                    </div>
+                
                 <div class="form-group col">
                   <label>Pin Code (6 Digit)</label>
                   <label class="show-error">*</label><br>
@@ -141,26 +152,25 @@
                     minlength="6" maxlength="6" style="    border: 1px solid #ced4da;
                     padding: 2%;">
                
-                  <div *ngIf="pincodeno['pincdctrl'].touched && pincodeno['pincdctrl'].invalid" class="show-error">
-                    <div *ngIf="pincodeno['pincdctrl'].errors?.['required'] && pincodeno['pincdctrl'].dirty">Please enter pin code
+                  <div *ngIf="f['pincdctrl'].touched && f['pincdctrl'].invalid" class="show-error">
+                    <div *ngIf="f['pincdctrl'].errors?.['required'] && f['pincdctrl'].dirty">Please enter pin code
                     </div>
-                    <div *ngIf="pincodeno['pincdctrl'].errors?.['pattern'] && pincodeno['pincdctrl'].dirty"> 6 digit pin code required
+                    <div *ngIf="f['pincdctrl'].errors?.['pattern'] && f['pincdctrl'].dirty"> 6 digit pin code required
                     </div>
                   </div>
                 </div>
                
                 <div>
-
+                    <div class="modal-footer">
+                        <button class="btn Save_re sav2 mr-1 ">Save</button>
+                        <button class="btn Save_re" type="reset" (click)="onReset()"  data-dismiss="modal">Cancel</button>
+                    </div>
                   
                   <!-- <button type="submit" >Save</button>
                   [disabled]="!formGrp.valid" (click)="doSubmit()" -->
                 </div>
               </form>
 
-              <div class="modal-footer">
-                <button type="button" class="btn  Save_re sav2" data-dismiss="modal" routerLink="../classes-list">Close</button>
-                <button type="button" class="btn  Save_re">Save</button>
-              </div>
             </div>
       
       </div>

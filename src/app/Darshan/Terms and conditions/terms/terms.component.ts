@@ -12,11 +12,10 @@ export class TermsComponent implements OnInit {
 
   ngOnInit(): void {
     this.termsEdit = this.formBuilder.group({
-      title: ['', Validators.required],
       Document: ['', Validators.required],
       Terms: ['', Validators.required],
-      Details: ['', Validators.required,],
-    
+      Details: ['', Validators.required],
+      
   }, {
       
   });

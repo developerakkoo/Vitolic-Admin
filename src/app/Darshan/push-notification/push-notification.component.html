@@ -5,7 +5,7 @@
 
         <div class="card card_back">
             <div class="pucNoti">
-                <h4 class=""> Notification</h4>
+                <h4 class="Darshan_head"> Notification</h4>
                
             </div>
             <div class="desForm formDash">
@@ -15,12 +15,13 @@
                                     <div class="form-group col-5">
                                         <label>Type</label>
                                         <select formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
-                                            <option value="">Deliver Boy</option>
-                                            <option value="Mr">customer</option>
+                                            <option value=""></option>
+                                            <option value="customer">Customer</option>
+                                            <option value="Deliver">Deliver Boy</option>
                                             
                                         </select>
                                         <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
-                                            <div *ngIf="f.title.errors.required">Title is required</div>
+                                            <div *ngIf="f.title.errors.required">Type is required</div>
                                         </div>
                                     </div>
                                     

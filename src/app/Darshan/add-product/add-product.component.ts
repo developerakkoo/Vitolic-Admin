@@ -14,12 +14,13 @@ export class AddProductComponent implements OnInit {
   ngOnInit(): void {
     this.AddProductForm = this.formBuilder.group({
       title: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
-      acceptTerms: [false, Validators.requiredTrue]
+      price: ['', Validators.required],
+      Discounted: ['', Validators.required],
+      Stock: ['', Validators.required],
+      Category: ['', Validators.required],
+      Units: ['', Validators.required],
+      file: ['',Validators.required],
+
   }, {
      
   });
@@ -35,7 +36,7 @@ export class AddProductComponent implements OnInit {
       }
 
       // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.AddProductForm.value, null, 4));
+      console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.AddProductForm.value, null, 4));
   }
 
   onReset() {

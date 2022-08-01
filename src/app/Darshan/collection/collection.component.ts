@@ -15,11 +15,10 @@ export class CollectionComponent implements OnInit {
 
     this.productForm = this.formBuilder.group({
       title: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
+      Product: ['', Validators.required],
+      Name: ['', Validators.required],
+   
+      city: ['', Validators.required],
       acceptTerms: [false, Validators.requiredTrue]
   }, );
   }

@@ -12,15 +12,12 @@ export class PrivacylistComponent implements OnInit {
 
   ngOnInit(): void {
     this.privacyEdit = this.formBuilder.group({
-   
       Policy: ['', Validators.required],
       Privacy: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
-      acceptTerms: [false, Validators.requiredTrue]
+      Details: ['', Validators.required],
+      
   }, {
-    
+      
   });
 }
   

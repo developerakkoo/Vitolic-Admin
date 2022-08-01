@@ -26,7 +26,7 @@
                                                 <th class="td-sz" scope="col">Order ID</th>
                                                 <th class="td-sz" scope="col">Image</th>
                                                 <th class="td-sz" scope="col">Product Name</th>
-                                                <th class="td-sz" scope="col">Amount</th>
+                                                
                                                 <th class="td-sz" scope="col"> Date</th>
                                                 <th class="td-sz" scope="col"> Status</th>
                                                 
@@ -48,7 +48,7 @@
                                                 <!-- <td class="td-sz File" scope="col">	established fact that a be distracted
                                                 </td> -->
                                                 <td class="td-sz " scope="col"> 18-06-2022</td>
-                                                <td class="td-sz " scope="col">$16.00</td>
+                                              
                                               
                                                 <td class="td-sz  " scope="col"><a class="de-btn de-2">Paid</a></td>
                                               
@@ -74,7 +74,7 @@
                                                 <!-- <td class="td-sz File" scope="col">	established fact that a be distracted
                                                 </td> -->
                                                 <td class="td-sz " scope="col"> 18-06-2022</td>
-                                                <td class="td-sz " scope="col">$16.00</td>
+                                              
                                               
                                                 <td class="td-sz  " scope="col"><a class="de-btn de-2">Paid</a></td>
                                               
@@ -100,7 +100,7 @@
                                                 <!-- <td class="td-sz File" scope="col">	established fact that a be distracted
                                                 </td> -->
                                                 <td class="td-sz " scope="col"> 18-06-2022</td>
-                                                <td class="td-sz " scope="col">$16.00</td>
+                                              
                                               
                                                 <td class="td-sz  " scope="col"><a class="de-btn de-1">Failed</a></td>
                                               
@@ -127,7 +127,7 @@
                                                 <!-- <td class="td-sz File" scope="col">	established fact that a be distracted
                                                 </td> -->
                                                 <td class="td-sz " scope="col"> 18-06-2022</td>
-                                                <td class="td-sz " scope="col">$16.00</td>
+                                              
                                               
                                                 <td class="td-sz  " scope="col"><a class="de-btn de-3">Pending</a></td>
                                               
@@ -154,11 +154,11 @@
   <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header  header_Modal">
           <h5 class="modal-title" id="staticBackdropLabel">Edit Deliver
         </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true" class="text-light">&times;</span>
           </button>
         </div>
         <div class="modal-body">
@@ -166,7 +166,7 @@
                 <div class="row form-row mt-3">
                     <div class="col form-group">
                         <label> Name</label>
-                        <input type="text" formControlName="Name" placeholder="Event Name"
+                        <input type="text" formControlName="Name" placeholder=" Name"
                             class="form-control control_form "
                             [ngClass]="{ 'is-invalid': submitted && f.Name.errors }" />
                         <div *ngIf="submitted && f.Name.errors" class="invalid-feedback">
@@ -177,11 +177,11 @@
                 <div class="row form-row mt-3">
                     <div class="col-md-6 form-group">
                         <label>Product Name</label>
-                        <input type="text" formControlName="fName" placeholder="Event Name"
+                        <input type="text" formControlName="pName" placeholder="Event Name"
                             class="form-control control_form "
-                            [ngClass]="{ 'is-invalid': submitted && f.fName.errors }" />
-                        <div *ngIf="submitted && f.fName.errors" class="invalid-feedback">
-                            <div *ngIf="f.fName.errors.required">Product Name is required</div>
+                            [ngClass]="{ 'is-invalid': submitted && f.pName.errors }" />
+                        <div *ngIf="submitted && f.pName.errors" class="invalid-feedback">
+                            <div *ngIf="f.pName.errors.required">Product Name is required</div>
                         </div>
                     </div>
                   
@@ -189,33 +189,26 @@
                     <div class="col-md-5 form-group">
                         
                         <label>Date</label>
-                        <input type="date" formControlName="Date" class="form-control control_form "
-                            [ngClass]="{ 'is-invalid': submitted && f.Date.errors }" />
-                        <div *ngIf="submitted && f.Date.errors" class="invalid-feedback">
-                            <div *ngIf="f.Date.errors.required">Date is required</div>
+                        <input type="date" formControlName="date" class="form-control control_form "
+                            [ngClass]="{ 'is-invalid': submitted && f.date.errors }" />
+                        <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                            <div *ngIf="f.date.errors.required">Date is required</div>
                         </div>
                     </div>
               
                 </div>
                 <div class="row form-row mt-3">
-                    <div class="col-md-4">
-                        <label>Price</label>
-                        <input type="peice" formControlName="price" class="form-control control_form "
-                            [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
-                        <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
-                            <div *ngIf="f.price.errors.required">Price is required</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
+                 
+                    <div class="col-6">
                         <label>Order ID</label>
-                        <input type="discount" formControlName="OrderID" class="form-control control_form "
+                        <input type="text" formControlName="OrderID" class="form-control control_form "
                             [ngClass]="{ 'is-invalid': submitted && f.OrderID.errors }" />
                         <div *ngIf="submitted && f.OrderID.errors" class="invalid-feedback">
                             <div *ngIf="f.OrderID.errors.required">Order ID  is required</div>
                            
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <label>Quantity</label>
                         <select formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
                             <option value="">Paid</option>
@@ -242,15 +235,17 @@
                 </div>
                
                
-           
-         
+                <div class="text-center modal-footer">
+                    <button class="btn Save_re sav mr-1">Save</button>
+                    <button class="btn Save_re sav2" type="reset" (click)="onReset()" data-dismiss="modal">Cancel</button>
+                </div>
                 
             </form>
         </div>
-        <div class="modal-footer">
+        <!-- <div class="modal-footer">
           <button type="button" class="btn  Save_re sav2" data-dismiss="modal" routerLink="../classes-list">Close</button>
           <button type="button" class="btn  Save_re">Save</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

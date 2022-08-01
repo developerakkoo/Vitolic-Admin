@@ -86,7 +86,7 @@ let sidebarData: any = [
     isActive: false,
   },
   {
-    name: ' Tatal Banner',
+    name: ' Total Banner',
     link: '/admin/banner',
     image: '../../../../assets/images/reward.svg',
     children: [
@@ -107,7 +107,7 @@ let sidebarData: any = [
     isActive: false,
   },
   {
-    name:'Tatal City',
+    name:'Total City',
     link :'/admin/total-city',
     image: '../../../../assets/images/reward.svg',
     children:[],

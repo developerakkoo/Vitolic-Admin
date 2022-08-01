@@ -93,79 +93,82 @@
 
                                     <!-- Modal -->
                                     <div class="modal fade" id="staticBackdrop" data-backdrop="static"
-                                        data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="staticBackdropLabel">Edit Order
-                                                    </h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form [formGroup]="termsEdit" (ngSubmit)="onSubmit()">
-                                                        <div class="row form-row mt-3">
-                                                            <div class="col-6 form-group">
-                                                                <label> Document no.</label>
-                                                                <input type="number" formControlName="Document"
-                                                                    class="form-control control_form "
-                                                                    [ngClass]="{ 'is-invalid': submitted && f.Document.errors }" />
-                                                                <div *ngIf="submitted && f.Document.errors"
-                                                                    class="invalid-feedback">
-                                                                    <div *ngIf="f.Document.errors.required"> Document is
-                                                                        required</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row form-row mt-3">
-                                                            <div class="col-md-6 form-group">
-                                                                <label>Terms\conditions</label>
-                                                                <input type="text" formControlName="Terms"
-                                                                    class="form-control control_form "
-                                                                    [ngClass]="{ 'is-invalid': submitted && f.Terms.errors }" />
-                                                                <div *ngIf="submitted && f.Terms.errors"
-                                                                    class="invalid-feedback">
-                                                                    <div *ngIf="f.Terms.errors.required">
-                                                                        Terms\conditions Name is required</div>
-                                                                </div>
-                                                            </div>
-
-
-
-                                                        </div>
-
-
-
-
-                                                        <div class="row  form-row mt-3 ">
-                                                            <div class="col-md-12 form-group">
-                                                                <label>Long Description</label>
-                                                                <textarea id="story" name="story" class="Str" rows="5"
-                                                                    cols="120" formControlName="Terms"
-                                                                    class="form-control control_form  Long_description"
-                                                                    [ngClass]="{ 'is-invalid': submitted && f.Terms.errors }"></textarea>
-                                                                <div *ngIf="submitted && f.Terms.errors"
-                                                                    class="invalid-feedback">
-                                                                    <div *ngIf="f.Terms.errors.required">Last Name is
-                                                                        required</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn  Save_re sav2" data-dismiss="modal"
-                                                        routerLink="../classes-list">Close</button>
-                                                    <button type="button" class="btn  Save_re">Save</button>
-                                                </div>
+                                    data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header header_Modal">
+                                                <h5 class="modal-title" id="staticBackdropLabel">Edit Terms
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true" class="text-light">&times;</span>
+                                                </button>
                                             </div>
+                                            <div class="modal-body">
+                                             
+                                           
+                                                <form [formGroup]="termsEdit" (ngSubmit)="onSubmit()">
+                                                    <div class="row form-row mt-3">
+                                                        <div class="col form-group">
+                                                            <label> Document no..</label>
+                                                            <input type="text" formControlName="Document" placeholder=" Document"
+                                                                class="form-control control_form "
+                                                                [ngClass]="{ 'is-invalid': submitted && f.Document.errors }" />
+                                                            <div *ngIf="submitted && f.Document.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.Document.errors.required"> Document no. is required</div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    <div class="row form-row mt-3">
+                                                        <div class="col-md-6 form-group">
+                                                            <label>Terms\conditions</label>
+                                                            <input type="text" formControlName="Terms" placeholder=""
+                                                                class="form-control control_form "
+                                                                [ngClass]="{ 'is-invalid': submitted && f.Terms.errors }" />
+                                                            <div *ngIf="submitted && f.Terms.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.Terms.errors.required">Terms\conditions is required</div>
+                                                            </div>
+                                                        </div>
+                                                      
+                                                     
+                                                     
+                                                  
+                                                    </div>
+                                                    <div class="row form-row mt-3">
+                                                        <div class="col-md-12 form-group">
+                                                            <label>Details</label>
+                                                            <textarea id="story" name="story" class="Str" rows="5"
+                                                                cols="120" formControlName="Details"
+                                                                class="form-control control_form  Long_description"
+                                                                [ngClass]="{ 'is-invalid': submitted && f.Details.errors }"></textarea>
+                                                            <div *ngIf="submitted && f.Details.errors"
+                                                                class="invalid-feedback">
+                                                                <div *ngIf="f.Details.errors.required">Details is
+                                                                    required</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                  
+                                                   
+                                                   
+                                                    <div class="text-center modal-footer">
+                                                        <button class="btn Save_re sav mr-1">Save</button>
+                                                        <button class="btn Save_re sav2" type="reset" (click)="onReset()" data-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                    
+                                                </form>
+                                           
+                                           
+                                           
+                                           
+                                           
+                                            </div>
+                                          
                                         </div>
                                     </div>
+                                </div>
                                     <!-- ----------------------------- -->
 
                                 </div>

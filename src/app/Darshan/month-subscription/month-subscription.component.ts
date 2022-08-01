@@ -7,23 +7,52 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./month-subscription.component.scss']
 })
 export class MonthSubscriptionComponent implements OnInit {
+ 
   EditmonthlyForm:any= FormGroup;
-  submitted = false;
-
+    submitted = false;
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.EditmonthlyForm = this.formBuilder.group({
-      title: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
-      acceptTerms: [false, Validators.requiredTrue]
-  }, {
-      // validator: MustMatch('password', 'confirmPassword')
-  });
+  //   this.EditmonthlyForm = this.formBuilder.group({
+  //     // title: ['', Validators.required],
+  //     // Invoice: ['', Validators.required],
+  //     // firstName: ['', Validators.required],
+  //     // email: ['', [Validators.required, Validators.email]],
+  //     // password: ['', Validators.required],
+  //     // Address: ['', Validators.required],
+  //     // Deliveryf: ['',Validators.required],
+  //     // Deliveryp :['',Validators.required],
+     
+  // }, {
+  //     // validator: MustMatch('password', 'confirmPassword')
+  // });
+//   this.EditmonthlyForm = this.formBuilder.group({
+//     title: ['', Validators.required],
+//     Invoice: ['', Validators.required],
+//     firstName: ['', Validators.required],
+//     Address: ['', Validators.required],
+//     email: ['', [Validators.required, Validators.email]],
+//     Deliveryf: ['', Validators.required],
+//     Deliveryp: ['', Validators.required],
+//     Phone: ['', Validators.required],
+    
+// }, {
+  
+// });
+this.EditmonthlyForm = this.formBuilder.group({
+  title: ['', Validators.required],
+  firstName: ['', Validators.required],
+  lastName: ['', Validators.required],
+  email: ['', [Validators.required, Validators.email]],
+  Address: ['', Validators.required],
+  Invoice: ['',Validators.required],
+  Phone: ['',Validators.required],
+  // password: ['', [Validators.required, Validators.minLength(6)]],
+  Deliveryf: ['', Validators.required],
+      Deliveryp: ['', Validators.required],
+}, {
+ 
+});
   }
   get f() { return this.EditmonthlyForm.controls; }
 

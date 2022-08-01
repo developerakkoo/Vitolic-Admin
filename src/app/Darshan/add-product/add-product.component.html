@@ -12,36 +12,30 @@
                             <label>Title</label>
                             <select formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
                                 <option value=""></option>
-                                <option value="Mr">Mr</option>
-                                <option value="Mrs">Mrs</option>
-                                <option value="Miss">Miss</option>
-                                <option value="Ms">Ms</option>
+                                <option value="A1 Milk">A1 Milk</option>
+                                <option value="A2 Milk">A2 Milk</option>
+                               
                             </select>
                             <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
                                 <div *ngIf="f.title.errors.required">Title is required</div>
                             </div>
                             </div>
-
-                       
-
-
-
                     </div>
                     <div class="row form-row mt-5">
                         <div class="col-md-5 form-group">
                             <label>Price</label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
-                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
-                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            <input type="price" formControlName="price" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                                <div *ngIf="f.price.errors.required">Price is required</div>
                             </div>
 
                         </div>
 
                         <div class="col-md-4 form-group">
-                            <label>DiscountedPrice</label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
-                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
-                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            <label>Discounted Price</label>
+                            <input type="price" formControlName="Discounted" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.Discounted.errors }" />
+                            <div *ngIf="submitted && f.Discounted.errors" class="invalid-feedback">
+                                <div *ngIf="f.Discounted.errors.required">Discounted Price is required</div>
                             </div>
 
                         </div>
@@ -51,19 +45,19 @@
 
                     <div class="row form-row mt-5">
                         <div class="col-md-5 form-group">
-                            <label>inStock</label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
-                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
-                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            <label> In -Stock</label>
+                            <input type="text" formControlName="Stock" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.Stock.errors }" />
+                            <div *ngIf="submitted && f.Stock.errors" class="invalid-feedback">
+                                <div *ngIf="f.Stock.errors.required">Stock is required</div>
                             </div>
 
                         </div>
 
                         <div class="col-md-4 form-group">
                             <label>Category </label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
-                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
-                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            <input type="text" formControlName="Category" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.Category.errors }" />
+                            <div *ngIf="submitted && f.Category.errors" class="invalid-feedback">
+                                <div *ngIf="f.Category.errors.required">Category is required</div>
                             </div>
 
                         </div>
@@ -73,47 +67,29 @@
                     <div class="row form-row mt-5">
                         <div class="col-md-5 form-group">
                             <label>Stock</label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
-                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
-                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            <input type="text" formControlName="Stock" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.Stock.errors }" />
+                            <div *ngIf="submitted && f.Stock.errors" class="invalid-feedback">
+                                <div *ngIf="f.Stock.errors.required">Stock is required</div>
                             </div>
 
                         </div>
 
                         <div class="col-md-4 form-group">
-                            <label>units </label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
-                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
-                                <div *ngIf="f.description.errors.required">First Name is required</div>
+                            <label>Units </label>
+                            <input type="text" formControlName="Units" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.Units.errors }" />
+                            <div *ngIf="submitted && f.Units.errors" class="invalid-feedback">
+                                <div *ngIf="f.Units.errors.required">Units is required</div>
                             </div>
 
                         </div>
-                        <div>
-                            <label>imageUrl</label>
-                            <input type="text" formControlName="description" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
-                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
-                                <div *ngIf="f.description.errors.required">First Name is required</div>
-                            </div>
-
+                        <div class="col-md-8 mt-3 mb-3">
+                            <label class="new-button new-button2 " for="upload">Choose File</label>
+                            <input id="upload" type="file" name="filename"> <span class="No_file">No File chosen</span>
                         </div>
-
                     </div>
-                    <div class="row  form-row mt-5 ">
-                   
-
-                        <!-- <div class="col-md-8">
-                            <ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
-                        </div> -->
-
-
-                    </div>
-
-
-
-                    <div class="d-flex justify-content-start">
-                        <button type="button" class="btn  Save_re " routerLink="../terms">Cancel </button>
-                        <button class="btn btn-primary mr-1 Save_re sav2 ml-3">Save </button>
-
+                     <div class="d-flex justify-content-start">
+                        <button type="button" class="btn  Save_re " routerLink="../product">Cancel </button>
+                        <button class="btn  mr-1 Save_re sav2 ml-3">Save </button>
                     </div>
                 </form>
             </div>

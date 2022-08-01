@@ -8,7 +8,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class UserListComponent implements OnInit {
   UserForm:any=FormGroup;
-
   submitted = false;
 
   constructor(private formBuilder:FormBuilder) { }
@@ -16,13 +15,12 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
     this.UserForm = this.formBuilder.group({
       title: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
-      acceptTerms: [false, Validators.requiredTrue]
-  }, );
+      ProductName: ['', Validators.required],
+      price: ['', Validators.required],
+    
+  }, {
+      
+  });
   }
   get f() { return this.UserForm.controls; }
 
