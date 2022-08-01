@@ -40,7 +40,7 @@ this.EditmonthlyForm = this.formBuilder.group({
       }
 
       // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.EditmonthlyForm.value, null, 4));
+      console.log(this.EditmonthlyForm.value);
   }
 
   onReset() {

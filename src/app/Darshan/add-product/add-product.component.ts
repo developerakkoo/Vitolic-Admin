@@ -30,19 +30,10 @@ export class AddProductComponent implements OnInit {
   onSubmit() {
       this.submitted = true;
 
-      // stop here if form is invalid
-      if (this.AddProductForm.invalid) {
-          return;
-      }
-
-      // display form values on success
-      console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.AddProductForm.value, null, 4));
+      console.log(this.AddProductForm.value,);
   }
 
-  onReset() {
-      this.submitted = false;
-      this.AddProductForm.reset();
-  }
+  
 
 }
 

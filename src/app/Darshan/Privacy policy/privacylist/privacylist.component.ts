@@ -34,7 +34,7 @@ export class PrivacylistComponent implements OnInit {
           }
   
           // display form values on success
-          alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.privacyEdit.value, null, 4));
+          console.log(this.privacyEdit.value);
       }
   
       onReset() {

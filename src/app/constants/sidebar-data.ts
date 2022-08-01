@@ -249,6 +249,22 @@ let sidebarData: any = [
   //   isActive: false,
   // },
   {
+    name: 'Refund',
+    link:'/admin/refund',
+    image: '../../../../assets/images/user.svg',
+    icon: false,
+    isActive: false,
+
+  },
+  {
+    name :"Cart",
+    link :'/admin/cart',
+    image: '../../../../assets/images/user.svg',
+    icon: false,
+    isActive: false,
+  }
+  ,
+  {
     name: 'Settings',
     link: '',
     image: '../../../../assets/images/uiw_setting .svg',

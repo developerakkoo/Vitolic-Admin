@@ -6,12 +6,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./coupon.component.scss']
 })
 export class CouponComponent implements OnInit {
-  productForm:any= FormGroup;
+  couponForm:any= FormGroup;
   submitted = false;
   constructor(private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
-    this.productForm = this.formBuilder.group({
+    this.couponForm = this.formBuilder.group({
       title: ['', Validators.required],
       Name: ['', Validators.required],
       Product: ['', Validators.required],
@@ -19,23 +19,23 @@ export class CouponComponent implements OnInit {
 
   }, );
   }
-  get f() { return this.productForm.controls; }
+  get f() { return this.couponForm.controls; }
 
   onSubmit() {
       this.submitted = true;
 
       // stop here if form is invalid
-      if (this.productForm.invalid) {
+      if (this.couponForm.invalid) {
           return;
       }
 
       // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.productForm.value, null, 4));
+      console.log(this.couponForm.value);
   }
 
   onReset() {
       this.submitted = false;
-      this.productForm.reset();
+      this.couponForm.reset();
   }
 
 }

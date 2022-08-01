@@ -1,25 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
-  selector: 'app-collection',
-  templateUrl: './collection.component.html',
-  styleUrls: ['./collection.component.scss']
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.scss']
 })
-export class CollectionComponent implements OnInit {
+export class CartComponent implements OnInit {
   productForm:any= FormGroup;
   submitted = false;
   constructor(private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
-
-
     this.productForm = this.formBuilder.group({
       title: ['', Validators.required],
-      Product: ['', Validators.required],
-      Name: ['', Validators.required],
+      Address: ['', Validators.required],
+      userId: ['', Validators.required],
    
-      city: ['', Validators.required],
-      acceptTerms: [false, Validators.requiredTrue]
+      total: ['', Validators.required],
+     
   }, );
   }
 
@@ -34,7 +32,7 @@ export class CollectionComponent implements OnInit {
       }
 
       // display form values on success
-      console.log(this.productForm.value);
+      console.log(this.productForm.value,);
   }
 
   onReset() {

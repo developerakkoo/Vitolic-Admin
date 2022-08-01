@@ -62,7 +62,7 @@ onSubmit() {
     }
 
     // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.totalCity.value, null, 4));
+    console.log(this.totalCity.value);
 }
 
 onReset() {

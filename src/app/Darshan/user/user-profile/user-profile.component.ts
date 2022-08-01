@@ -7,44 +7,43 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent implements OnInit {
-  registerForm:any= FormGroup;
+  UserProfileForm:any= FormGroup;
     submitted = false;
 
   constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.registerForm = this.formBuilder.group({
-      user :['',Validators.required],
-      Membership: ['', Validators.required],
-      Mobileno: ['', Validators.required],
-      Status: ['', Validators.required],
-      country:['',Validators.required],
-      DateofBirth:['',Validators.required],
+    this.UserProfileForm = this.formBuilder.group({
+      fName  :['',Validators.required],
+      lName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      Occupation: ['', Validators.required],
-      acceptTerms: [false, Validators.requiredTrue]
+      contactNumber: ['', Validators.required],
+      verificationStatus : ['', Validators.required],
+      walletCashbackAvailable :['',Validators.required],
+      couponCode:['',Validators.required],
+    
+     
   }, {
       // validator: MustMatch('password', 'confirmPassword')
   });
   }
-  get f() { return this.registerForm.controls; }
+  get f() { return this.UserProfileForm.controls; }
 
   onSubmit() {
       this.submitted = true;
 
       // stop here if form is invalid
-      if (this.registerForm.invalid) {
+      if (this.UserProfileForm.invalid) {
           return;
       }
 
       // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+      console.log(this.UserProfileForm.value);
   }
 
   onReset() {
       this.submitted = false;
-      this.registerForm.reset();
+      this.UserProfileForm.reset();
   }
 
 }

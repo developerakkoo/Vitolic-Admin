@@ -22,12 +22,13 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     this.productForm = this.formBuilder.group({
       title: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
-      acceptTerms: [false, Validators.requiredTrue]
+      price: ['', Validators.required],
+      Discounted: ['', Validators.required],
+      Stock: ['', Validators.required],
+      Category: ['', Validators.required],
+      Units: ['', Validators.required],
+      file: ['',Validators.required],
+
   }, );
 
   
@@ -41,12 +42,12 @@ export class ProductComponent implements OnInit {
       this.submitted = true;
 
       // stop here if form is invalid
-      if (this.productForm.invalid) {
-          return;
-      }
+      // if (this.productForm.invalid) {
+      //     return;
+      // }
 
       // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.productForm.value, null, 4));
+      console.log(this.productForm.value);
   }
 
   onReset() {

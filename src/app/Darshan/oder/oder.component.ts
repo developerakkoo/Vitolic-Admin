@@ -34,7 +34,7 @@ export class OderComponent implements OnInit {
       }
 
       // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.orderEdit.value, null, 4));
+      console.log( this.orderEdit.value);
   }
 
   onReset() {

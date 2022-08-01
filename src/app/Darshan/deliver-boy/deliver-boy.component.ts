@@ -32,7 +32,7 @@ export class DeliverBoyComponent implements OnInit {
       }
 
       // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.DeliverEdit.value, null, 4));
+      console.log(this.DeliverEdit.value, null, 4);
   }
 
   onReset() {

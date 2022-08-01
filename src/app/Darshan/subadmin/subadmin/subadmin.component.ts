@@ -45,7 +45,7 @@ export class SubadminComponent implements OnInit {
        }
 
        // display form values on success
-       alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+       console.log(this.registerForm.value);
    }
 
    onReset() {

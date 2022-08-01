@@ -42,7 +42,7 @@ export class PolicyAddComponent implements OnInit {
     }
 
     // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this. darshanForm.value, null, 4));
+    console.log(this. darshanForm.value);
 }
 
 onReset() {

@@ -7,38 +7,43 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./user-list.component.scss']
 })
 export class UserListComponent implements OnInit {
-  UserForm:any=FormGroup;
+  UserEitForm:any=FormGroup;
   submitted = false;
 
   constructor(private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
-    this.UserForm = this.formBuilder.group({
-      title: ['', Validators.required],
-      ProductName: ['', Validators.required],
-      price: ['', Validators.required],
+    this.UserEitForm = this.formBuilder.group({
+      fName  :['',Validators.required],
+      lName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      contactNumber: ['', Validators.required],
+      verificationStatus : ['', Validators.required],
+      walletCashbackAvailable :['',Validators.required],
+      couponCode:['',Validators.required],
+    
     
   }, {
       
   });
   }
-  get f() { return this.UserForm.controls; }
+  get f() { return this.UserEitForm.controls; }
 
   onSubmit() {
       this.submitted = true;
 
       // stop here if form is invalid
-      if (this.UserForm.invalid) {
+      if (this.UserEitForm.invalid) {
           return;
       }
 
       // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.UserForm.value, null, 4));
+      console.log(this.UserEitForm.value);
   }
 
   onReset() {
       this.submitted = false;
-      this.UserForm.reset();
+      this.UserEitForm.reset();
   }
 
 }

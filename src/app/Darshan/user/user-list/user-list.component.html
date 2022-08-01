@@ -7,7 +7,7 @@
                 <!-- <app-modelopen class="mt-3"></app-modelopen> -->
                 <!-- <app-add-meditation></app-add-meditation> -->
                 <!-- (click)="openModal()" -->
-                <!-- <button class="btn  mb-3  mt-2 creat" routerLink="../add-event">Add Product</button> -->
+                <button class="btn  mb-3  mt-2 creat" routerLink="../user-profile">Add Product</button>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -22,14 +22,14 @@
                                         <thead class="headline">
                                             <tr>
                                                 <th class="td-sz" scope="col">S.no.</th>
-                                                <th class="td-sz" scope="col">Image</th>
-                                                <th class="td-sz" scope="col">Product Name</th>
+                                                <th class="td-sz" scope="col"> FirstName </th>
+                                                <th class="td-sz" scope="col">Last Name</th>
                                                 
-                                                <th class="td-sz" scope="col"> </th>
-                                                <th class="td-sz" scope="col"> Price</th>
-                                                <th class="td-sz" scope="col"> </th>
-                                                <th class="td-sz" scope="col"> </th>
-
+                                                <th class="td-sz" scope="col"> Email</th>
+                                                <th class="td-sz" scope="col"> Contact Number </th>
+                                                <th class="td-sz" scope="col">CashbackAvailable</th>
+                                                <th class="td-sz" scope="col"> couponCode</th>
+                                                <th class="td-sz" scope="col"> Status</th>
 
                                                 <th class="justify-content-end" scope="col">Action</th>
 
@@ -41,23 +41,19 @@
                                             <tr>
                                                 <td class="td-sz" scope="col"> 1</td>
                                                 <td class="td-sz" scope="col">
-                                                 <div>
-                                                    <img src="../../../../assets/images/1.png" class="img-fluid Tab"
-                                                    alt="...">
-                                                 </div>
+                                               
                                                    
                                                 </td>
-                                                <td class="td-sz" scope="col">Simple Black Clock</td>
+                                                <td class="td-sz" scope="col"> </td>
                                                 <td class="td-sz File" scope="col"> 
                                                 </td>
-                                                <td class="td-sz " scope="col"> $3.00</td>
                                                 <td class="td-sz " scope="col"></td>
-                                                <td class="td-sz " scope="col">
-                                                  
-                                                </td>
+                                                <td class="td-sz " scope="col"></td>
+                                                <td class="td-sz " scope="col"> </td>
+                                                <td class="td-sz " scope="col"> </td>
                                                 <td class="td-sz edt">
 
-                                                    <div class="justify-content-between" style="    margin-top: 28%;">
+                                                    <div class="justify-content-between" style="    margin-top: 8%;">
                                                         
                                                         <a type="button" class="dropbtn" data-toggle="modal" data-target="#exampleModalCenter" style="margin-right:7px ;">
                                                             <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -92,39 +88,98 @@
           </button>
         </div>
         <div class="modal-body">
-                    <form [formGroup]="UserForm" (ngSubmit)="onSubmit()">
-                        <div class="form-row">
-
-                            <div class="form-group col-6">
-                                <label>Product Name</label>
-                                <input type="text" formControlName=""placeholder=" Product Name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ProductName.errors }" />
-                                <div *ngIf="submitted && f.ProductName.errors" class="invalid-feedback">
-                                    <div *ngIf="f.ProductName.errors.required">Product Name is required</div>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="form-row">
-                            <div class="form-group col-6">
-                                <label>Price</label>
-                                <input type="text" formControlName="price" placeholder="Price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
-                                <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
-                                    <div *ngIf="f.price.errors.required">Price  is required</div>
-                                </div>
-                            </div>
+            <form [formGroup]="UserEitForm" (ngSubmit)="onSubmit()">
+                <div class="row form-row mt-3">
+                    <div class="col form-group">
+                        <label>First Name</label>
+                        <input type="text" formControlName="fName" placeholder=" First Name"
+                            class="form-control control_form "
+                            [ngClass]="{ 'is-invalid': submitted && f.fName.errors }" />
+                        <div *ngIf="submitted && f.fName.errors" class="invalid-feedback">
+                            <div *ngIf="f.fName.errors.required"> First Name is required</div>
                         </div>
-                    
-                        <div class="col-md-8">
-                            <label class="new-button new-button2 "
-                                for="upload">Choose File</label>
-                            <input id="upload" type="file" name="filename"> <span
-                                class="No_file">No File chosen</span>
+                    </div>
+                    </div>
+                <div class="row form-row mt-3">
+                    <div class="col-md-6 form-group">
+                        <label>Last Name </label>
+                        <input type="text" formControlName="lName " placeholder="lName "
+                            class="form-control control_form "
+                            [ngClass]="{ 'is-invalid': submitted && f.lName .errors }" />
+                        <div *ngIf="submitted && f.lName .errors" class="invalid-feedback">
+                            <div *ngIf="f.lName .errors.required">Last   Name is required</div>
                         </div>
-                      
-                        <div class="text-center modal-footer">
-                            <button class="btn Save_re sav mr-1">Save</button>
-                            <button class="btn Save_re sav2" type="reset" (click)="onReset()" data-dismiss="modal">Cancel</button>
+                    </div>
+                  
+                 
+                    <div class="col-md-5 form-group">
+                        
+                        <label>Contact Number</label>
+                        <input type="contactNumber" formControlName="contactNumber" class="form-control control_form "
+                            [ngClass]="{ 'is-invalid': submitted && f.contactNumber.errors }" />
+                        <div *ngIf="submitted && f.contactNumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.contactNumber.errors.required">Contact Number is required</div>
                         </div>
-                    </form>
+                    </div>
+              
+                </div>
+                <div class="row form-row mt-3">
+                    <div class="col-md-4">
+                        <label>Email</label>
+                        <input type="email" formControlName="email" class="form-control control_form "
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-4">
+                        <label>Status</label>
+                        <select formControlName="verificationStatus" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.verificationStatus.errors }">
+                            <option value=""></option>
+                            <option value="FAILED">FAILED</option>
+                            <option value="PENDING">PENDING</option>
+                            <option value="Paid">Paid</option>
+                           
+                        </select>
+                        <div *ngIf="submitted && f.verificationStatus.errors" class="invalid-feedback">
+                            <div *ngIf="f.verificationStatus.errors.required">Status is required</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row form-row mt-4">
+                    <div class="col-md-5 form-group">
+                        
+                        <label>Cashback Available </label>
+                        <input type="text" formControlName="walletCashbackAvailable" class="form-control control_form "
+                            [ngClass]="{ 'is-invalid': submitted && f.walletCashbackAvailable.errors }" />
+                        <div *ngIf="submitted && f.walletCashbackAvailable.errors" class="invalid-feedback">
+                            <div *ngIf="f.walletCashbackAvailable.errors.required">Cashback Available  is required</div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 form-group">
+                        
+                        <label>Coupon Code</label>
+                        <input type="text" formControlName="couponCode" class="form-control control_form "
+                            [ngClass]="{ 'is-invalid': submitted && f.couponCode.errors }" />
+                        <div *ngIf="submitted && f.couponCode.errors" class="invalid-feedback">
+                            <div *ngIf="f.couponCode.errors.required">Coupon Code  is required</div>
+                        </div>
+                    </div>
+                </div>
+               
+               
+           
+                <div class="modal-footer">
+                  
+                    <button class="btn Save_re sav2" type="reset" routerLink="../user-list">Cancel</button>
+                    <button class="btn Save_re mr-1">Save</button>
+                
+                
+                </div>
+                
+            </form>
             
         </div>
         <!-- <div class="modal-footer">

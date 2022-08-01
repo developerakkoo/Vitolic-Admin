@@ -29,6 +29,8 @@ import { MonthSubscriptionComponent } from './month-subscription/month-subscript
 import { PickChoiceComponent } from './pick-choice/pick-choice.component';
 import{AddMathlyComponent} from './add-mathly/add-mathly.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { RefundComponent } from './refund/refund.component';
+import { CartComponent } from './cart/cart.component';
 const routes: Routes = [
 
   {
@@ -135,6 +137,12 @@ const routes: Routes = [
 },
 {
   path: 'add-product',component:AddProductComponent,
+},
+{
+  path: 'refund', component:RefundComponent,
+},
+{
+  path: 'cart',component:CartComponent,
 }
 
 ];

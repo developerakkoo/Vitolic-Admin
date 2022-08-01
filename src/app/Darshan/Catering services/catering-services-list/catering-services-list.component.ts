@@ -63,7 +63,7 @@ export class CateringServicesListComponent implements OnInit {
       }
 
       // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.couponForm.value, null, 4));
+      alert(this.couponForm.value);
   }
 
   onReset() {

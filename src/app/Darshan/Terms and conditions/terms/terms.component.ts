@@ -32,7 +32,7 @@ export class TermsComponent implements OnInit {
       }
 
       // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.termsEdit.value, null, 4));
+      console.log(this.termsEdit.value);
   }
 
   onReset() {

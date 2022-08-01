@@ -45,7 +45,7 @@ export class DashboardComponent implements OnInit {
       }
 
       // display form values on success
-      alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.couponForm.value, null, 4));
+      console.log(this.couponForm.value);
   }
   canvas: any;
   ctx: any;

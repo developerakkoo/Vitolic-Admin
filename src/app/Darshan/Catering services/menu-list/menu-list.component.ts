@@ -32,6 +32,7 @@ export class MenuListComponent implements OnInit {
       if (this.menuForm.invalid) {
           return;
       }
+      console.log(this.menuForm.value)
   }
   
   onReset() {

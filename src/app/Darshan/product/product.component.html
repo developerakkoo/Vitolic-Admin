@@ -85,90 +85,100 @@
                                       <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                         <div class="modal-dialog p-3">
                                           <div class="modal-content">
-                                            <div class="modal-header">
+                                            <div class="modal-header header_Modal">
                                               <h5 class="modal-title Darshan_head" id="staticBackdropLabel">Edit Product
                                             </h5>
                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                                <span aria-hidden="true" class="text-light">&times;</span>
                                               </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-                                                    <div class="row form-row mt-3">
-                                                        <div class="col form-group">
-                                                            <label>Product Name</label>
-                                                            <input type="text" formControlName="fName" placeholder="Event Name"
-                                                                class="form-control control_form "
-                                                                [ngClass]="{ 'is-invalid': submitted && f.fName.errors }" />
-                                                            <div *ngIf="submitted && f.fName.errors" class="invalid-feedback">
-                                                                <div *ngIf="f.fName.errors.required">First Name is required</div>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                        <div class="row form-row mt-3">
-                                                        <div class="col-md-5">
-                                                            <label>Price</label>
-                                                            <input type="peice" formControlName="price" class="form-control control_form "
-                                                                [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
-                                                            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
-                                                                <div *ngIf="f.price.errors.required">Last Name is required</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-5">
-                                                            <label>Quantity </label>
+                                                <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="p-3">
+
+                                                    <div class="row form-row mt-5">
+                                                        <div class="form-group col-3">
+                                                            <label>Title</label>
                                                             <select formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
-                                                                <option value="">1</option>
-                                                                <option value="Mr">2</option>
-                                                                <option value="Mrs">3</option>
-                                                                <option value="Miss">4</option>
-                                                                <option value="Ms">5</option>
+                                                                <option value=""></option>
+                                                                <option value="A1 Milk">A1 Milk</option>
+                                                                <option value="A2 Milk">A2 Milk</option>
+                                                               
                                                             </select>
                                                             <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
                                                                 <div *ngIf="f.title.errors.required">Title is required</div>
                                                             </div>
+                                                            </div>
+                                                    </div>
+                                                    <div class="row form-row mt-5">
+                                                        <div class="col-md-5 form-group">
+                                                            <label>Price</label>
+                                                            <input type="price" formControlName="price" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                                                            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.price.errors.required">Price is required</div>
+                                                            </div>
+                                
                                                         </div>
-                                                        </div>
-                                                        <div class="row form-row mt-3">
-                                                        <div class="col">
+                                
+                                                        <div class="col-md-4 form-group">
                                                             <label>Discounted Price</label>
-                                                            <input type="discount" formControlName="discount" class="form-control control_form "
-                                                                [ngClass]="{ 'is-invalid': submitted && f.discount.errors }" />
-                                                            <div *ngIf="submitted && f.discount.errors" class="invalid-feedback">
-                                                                <div *ngIf="f.discount.errors.required">discount is required</div>
-                                                                <div *ngIf="f.discount.errors.discount">Email must be a valid email address</div>
+                                                            <input type="price" formControlName="Discounted" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.Discounted.errors }" />
+                                                            <div *ngIf="submitted && f.Discounted.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.Discounted.errors.required">Discounted Price is required</div>
                                                             </div>
+                                
                                                         </div>
-                                                      
-                                                  
+                                
                                                     </div>
-                                                    <div class="row form-row mt-3">
-                                                        <div class="col form-group">
-                                                            <label>Product Description</label>
-                                                            <input type="text" formControlName="sdescriptio" class="form-control control_form "
-                                                                [ngClass]="{ 'is-invalid': submitted && f.sdescriptio.errors }" />
-                                                            <div *ngIf="submitted && f.sdescriptio.errors" class="invalid-feedback">
-                                                                <div *ngIf="f.sdescriptio.errors.required">First Name is required</div>
+                                
+                                
+                                                    <div class="row form-row mt-5">
+                                                        <div class="col-md-5 form-group">
+                                                            <label> In -Stock</label>
+                                                            <input type="text" formControlName="Stock" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.Stock.errors }" />
+                                                            <div *ngIf="submitted && f.Stock.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.Stock.errors.required">Stock is required</div>
                                                             </div>
+                                
                                                         </div>
-                                                      
+                                
+                                                        <div class="col-md-4 form-group">
+                                                            <label>Category </label>
+                                                            <input type="text" formControlName="Category" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.Category.errors }" />
+                                                            <div *ngIf="submitted && f.Category.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.Category.errors.required">Category is required</div>
+                                                            </div>
+                                
+                                                        </div>
+                                
                                                     </div>
-                                                    
-                                                    <div class="row form-row mt-4">
-                                                        <div class="col-md-3 ImageAli ">
-                                                            <p class="text-center">Images</p>
-                                    
-                                                           
+                                
+                                                    <div class="row form-row mt-5">
+                                                        <div class="col-md-5 form-group">
+                                                            <label>Stock</label>
+                                                            <input type="text" formControlName="Stock" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.Stock.errors }" />
+                                                            <div *ngIf="submitted && f.Stock.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.Stock.errors.required">Stock is required</div>
+                                                            </div>
+                                
                                                         </div>
-                                                        <div class="col-md-8">
+                                
+                                                        <div class="col-md-4 form-group">
+                                                            <label>Units </label>
+                                                            <input type="text" formControlName="Units" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.Units.errors }" />
+                                                            <div *ngIf="submitted && f.Units.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.Units.errors.required">Units is required</div>
+                                                            </div>
+                                
+                                                        </div>
+                                                        <div class="col-md-8 mt-3 mb-3">
                                                             <label class="new-button new-button2 " for="upload">Choose File</label>
                                                             <input id="upload" type="file" name="filename"> <span class="No_file">No File chosen</span>
                                                         </div>
                                                     </div>
-                                                   
-                                                   
-                                               
-                                             
-                                                   
+                                                     <div class="d-flex justify-content-start">
+                                                        <button type="button" class="btn  Save_re " routerLink="../product">Cancel </button>
+                                                        <button class="btn  mr-1 Save_re sav2 ml-3">Save </button>
+                                                    </div>
                                                 </form>
                                             </div>
                                             <div class="modal-footer">
