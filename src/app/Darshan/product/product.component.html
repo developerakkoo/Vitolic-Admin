@@ -86,7 +86,7 @@
                                         <div class="modal-dialog p-3">
                                           <div class="modal-content">
                                             <div class="modal-header header_Modal">
-                                              <h5 class="modal-title Darshan_head" id="staticBackdropLabel">Edit Product
+                                              <h5 class="modal-title " id="staticBackdropLabel">Edit Product
                                             </h5>
                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true" class="text-light">&times;</span>
@@ -130,9 +130,9 @@
                                                     <div class="row form-row mt-5">
                                                         <div class="col-md-5 form-group">
                                                             <label> In -Stock</label>
-                                                            <input type="text" formControlName="Stock" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.Stock.errors }" />
-                                                            <div *ngIf="submitted && f.Stock.errors" class="invalid-feedback">
-                                                                <div *ngIf="f.Stock.errors.required">Stock is required</div>
+                                                            <input type="text" formControlName="inStock" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.inStock.errors }" />
+                                                            <div *ngIf="submitted && f.inStock.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.inStock.errors.required">Stock is required</div>
                                                             </div>
                                 
                                                         </div>
@@ -177,10 +177,10 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                            <div class="modal-footer">
+                                            <!-- <div class="modal-footer">
                                               <button type="button" class="btn  Save_re sav2" data-dismiss="modal" routerLink="../event-list">Close</button>
                                               <button type="button" class="btn  Save_re">Save</button>
-                                            </div>
+                                            </div> -->
                                           </div>
                                         </div>
                                       </div>

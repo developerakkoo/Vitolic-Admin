@@ -12,7 +12,6 @@ export class ProductComponent implements OnInit {
   productForm:any= FormGroup;
   submitted = false;
   list:any;
-  
   product:any;
 
   // proList: any = [];
@@ -36,10 +35,12 @@ export class ProductComponent implements OnInit {
       title: ['', Validators.required],
       price: ['', Validators.required],
       Discounted: ['', Validators.required],
+      inStock:['',Validators.required],
       Stock: ['', Validators.required],
       Category: ['', Validators.required],
       Units: ['', Validators.required],
       file: ['',Validators.required],
+
 
   }, );
 
@@ -51,7 +52,13 @@ export class ProductComponent implements OnInit {
     console.log(item);
     this.product = item;
     this.productForm.get('title').setValue(item.title);    
-    this.productForm.get('price').setValue(item.price);    
+    this.productForm.get('price').setValue(item.price); 
+    this.productForm.get('Discounted').setValue(item.discountedPrice); 
+    this.productForm.get('inStock').setValue(item.inStock);
+    this.productForm.get('Category').setValue(item.category);
+    this.productForm.get('Stock').setValue(item.stock);
+    this.productForm.get('Units').setValue(item.units);
+    // this.productForm.get('file ').setValue(item.imageUrl);
   }
 
   delete(itemid:any){

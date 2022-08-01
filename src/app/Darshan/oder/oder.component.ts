@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { environment } from 'src/environments/environment';
+import { ServiceService } from '../service/service.service';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-oder',
   templateUrl: './oder.component.html',
@@ -8,7 +11,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class OderComponent implements OnInit {
   orderEdit:any= FormGroup;
   submitted = false;
-  constructor(private formBuilder:FormBuilder) { }
+  list:any;
+  constructor(private formBuilder:FormBuilder, private http: HttpClient,  private api:ServiceService) { }
 
   ngOnInit(): void {
     this.orderEdit = this.formBuilder.group({
@@ -22,6 +26,13 @@ export class OderComponent implements OnInit {
   }, {
      
   });
+  
+  this.api.ProductList()
+  .subscribe((status:any) =>{
+    console.log(status)
+    this.list = status['products'];
+  });
+
   }
   get f() { return this.orderEdit.controls; }
 

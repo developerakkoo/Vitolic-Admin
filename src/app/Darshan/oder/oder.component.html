@@ -37,12 +37,12 @@
 
 
                                         <tbody>
-                                            <tr>
-                                                <td class="td-sz" scope="col">John Smith</td>
+                                            <tr *ngFor="let item of list ">
+                                                <td class="td-sz" scope="col">Jh</td>
                                                 <td class="td-sz" scope="col"> #291989</td>
                                                 <td class="td-sz" scope="col">
-                                                    <img src="../../../../assets/images/1.png" class="img-fluid Tab"
-                                                        alt="...">
+                                                    <img [src]="item.imageUrl" class="img-fluid Tab"
+                                                    alt="...">
                                                 </td>
                                                 <td class="td-sz" scope="col">Simple Black Clock</td>
                                                 <!-- <td class="td-sz File" scope="col">	established fact that a be distracted
