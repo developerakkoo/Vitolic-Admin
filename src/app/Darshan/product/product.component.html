@@ -114,19 +114,14 @@
                                                             </div>
                                 
                                                         </div>
-                                
                                                         <div class="col-md-4 form-group">
                                                             <label>Discounted Price</label>
                                                             <input type="price" formControlName="Discounted" class="form-control control_form" [ngClass]="{ 'is-invalid': submitted && f.Discounted.errors }" />
                                                             <div *ngIf="submitted && f.Discounted.errors" class="invalid-feedback">
                                                                 <div *ngIf="f.Discounted.errors.required">Discounted Price is required</div>
-                                                            </div>
-                                
-                                                        </div>
-                                
+                                                            </div>                                
+                                                        </div>                               
                                                     </div>
-                                
-                                
                                                     <div class="row form-row mt-5">
                                                         <div class="col-md-5 form-group">
                                                             <label> In -Stock</label>
@@ -173,7 +168,7 @@
                                                     </div>
                                                      <div class="d-flex justify-content-start">
                                                         <button type="button" class="btn  Save_re " routerLink="../product">Cancel </button>
-                                                        <button class="btn  mr-1 Save_re sav2 ml-3">Save </button>
+                                                        <button class="btn  mr-1 Save_re sav2 ml-3" (click)="edit">Save </button>
                                                     </div>
                                                 </form>
                                             </div>

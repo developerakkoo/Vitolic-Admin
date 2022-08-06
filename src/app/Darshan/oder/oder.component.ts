@@ -35,18 +35,18 @@ export class OderComponent implements OnInit {
 
   }
   
-  delete(itemid:any){
-    console.log(itemid);
+  // delete(itemid:any){
+  //   console.log(itemid);
     
-    this.http.delete(environment.apiBaseUrl + '/order' + itemid)
-    .subscribe((response:any) => {
-      console.log(response);
+  //   this.http.delete(environment.apiBaseUrl + '/order' + itemid)
+  //   .subscribe((response:any) => {
+  //     console.log(response);
       
-    },(error:any) => {
-      console.log(error);
+  //   },(error:any) => {
+  //     console.log(error);
       
-    })
-  }
+  //   })
+  // }
   get f() { return this.orderEdit.controls; }
 
   onSubmit() {

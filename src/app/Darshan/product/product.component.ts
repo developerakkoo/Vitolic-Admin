@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { ServiceService } from '../service/service.service';
+import{product} from './productlistmodule'
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -12,6 +13,7 @@ export class ProductComponent implements OnInit {
   productForm:any= FormGroup;
   submitted = false;
   list:any;
+  protected:product = new product();
   product:any;
 
   // proList: any = [];
@@ -46,6 +48,7 @@ export class ProductComponent implements OnInit {
 
   
   }
+ 
 
 
   edit(item:any){

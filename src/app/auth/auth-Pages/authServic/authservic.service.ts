@@ -15,7 +15,7 @@ export class AuthservicService {
 
 
     console.log(data)
-    return this.http.post(`${environment.apiBaseUrl}${environment.apiPath}login`, data).pipe(map(res => <any>res));
+    // return this.http.post(`${environment.apiBaseUrl}${environment.apiPath}login`, data).pipe(map(res => <any>res));
     // return this.http.post<any>('http://3.111.168.156:5000/api/v1/adminRouter/login',data);
   }
 
@@ -24,7 +24,7 @@ export class AuthservicService {
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
-    return  this.http.post(`${environment.apiBaseUrl}${environment.apiPath}register`, data).pipe(map(res => <any>res));
+    // return  this.http.post(`${environment.apiBaseUrl}${environment.apiPath}register`, data).pipe(map(res => <any>res));
   }
 
 }

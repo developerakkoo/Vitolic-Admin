@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ServiceService } from '../../service/service.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -9,13 +12,24 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class UserListComponent implements OnInit {
   UserEitForm:any=FormGroup;
   submitted = false;
+  UserList: any;
+  User: any;
 
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder,private http: HttpClient,
+    private api:ServiceService) { }
 
   ngOnInit(): void {
+    this.api.UserList()
+    .subscribe((status:any) =>{
+      console.log(status)
+      this.UserList = status['user/profiles'];
+    });
+
+
+
     this.UserEitForm = this.formBuilder.group({
       fName  :['',Validators.required],
-      lName: ['', Validators.required],
+      lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       contactNumber: ['', Validators.required],
       verificationStatus : ['', Validators.required],
@@ -26,16 +40,47 @@ export class UserListComponent implements OnInit {
   }, {
       
   });
+  
+  }
+  
+
+
+  edit(item:any){
+    console.log(item);
+    this.User = item;
+    this.UserEitForm.get('fName').setValue(item.fName);    
+    this.UserEitForm.get('lastName').setValue(item.lName); 
+    this.UserEitForm.get('email').setValue(item.email); 
+    this.UserEitForm.get('contactNumber').setValue(item.contactNumber);
+    this.UserEitForm.get('verificationStatus').setValue(item.verificationStatus);
+    this.UserEitForm.get('walletCashbackAvailable').setValue(item.walletCashbackAvailable );
+    this.UserEitForm.get('couponCode').setValue(item.couponCode);
+    // this.productForm.get('file ').setValue(item.imageUrl);
+  }
+
+ 
+
+  delete(itemid:any){
+    console.log(itemid);
+    
+    this.http.delete(environment.apiBaseUrl + '/user/profiles' + itemid)
+    .subscribe((response:any) => {
+      console.log(response);
+      
+    },(error:any) => {
+      console.log(error);
+      
+    })
   }
   get f() { return this.UserEitForm.controls; }
 
   onSubmit() {
-      this.submitted = true;
+      this.submitted =false;
 
       // stop here if form is invalid
-      if (this.UserEitForm.invalid) {
-          return;
-      }
+      // if (this.UserEitForm.invalid) {
+      //     return;
+      // }
 
       // display form values on success
       console.log(this.UserEitForm.value);
