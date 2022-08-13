@@ -13,7 +13,7 @@ export class ProductComponent implements OnInit {
   productForm:any= FormGroup;
   submitted = false;
   list:any;
-  protected:product = new product();
+  // protected:product = new product();
   product:any;
 
   // proList: any = [];

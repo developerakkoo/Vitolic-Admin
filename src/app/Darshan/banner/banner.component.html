@@ -32,25 +32,12 @@
 
 
                                         <tbody>
-                                            <tr>
-                                                <td class="td-sz" scope="col"><ngp-image-picker [_config]="config2"></ngp-image-picker></td>
-                                                <td class="td-sz" scope="col"><ngp-image-picker [_config]="config2"></ngp-image-picker></td>
+                                            <tr *ngFor="let item of list ">
+                                                <td class="td-sz" scope="col">{{item.imageUrl }}</td>
+                                                <td class="td-sz" scope="col"></td>
                                                
                                             </tr>
-                                            <tr>
-                                                
-                                                <td class="td-sz" scope="col"><ngp-image-picker [_config]="config2"></ngp-image-picker></td>
-                                                
-                                                <td class="td-sz" scope="col"><ngp-image-picker [_config]="config2"></ngp-image-picker></td>
-                                              
-                                            </tr>
-                                            <tr>
-                                                
-                                                <td class="td-sz" scope="col"><ngp-image-picker [_config]="config2"></ngp-image-picker></td>
-                                                
-                                                <td class="td-sz" scope="col"><ngp-image-picker [_config]="config2"></ngp-image-picker></td>
-                                              
-                                            </tr>
+                                          
 
                                
                                             <!-- <ngp-image-picker [_imageSrc]="initialImage" ($imageChanged)="onImageChanged($event)" [_config]="config3"> </ngp-image-picker> -->

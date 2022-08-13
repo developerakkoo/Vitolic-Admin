@@ -16,12 +16,12 @@ export class ServiceService {
   constructor(private http: HttpClient) { }
 
   ProductList() {
-    let  url = "http://54.159.158.232/products";
+    let  url = "http://34.215.79.217/products";
     return this.http.get(url);
   }
-
+  // http://34.215.79.217/api-docs/
   ProductPost(data:any){
-    return this.http.post<any>("http://54.159.158.232/products",data)
+    return this.http.post<any>("http://34.215.79.217/products",data)
     .pipe(map((status:any)=>{
       return status;
     }))
@@ -33,10 +33,24 @@ return this.http.get(url);
   }
 
   UserList() {
-		let url =" http://54.159.158.232/user/profiles";
+		let url =" http://34.215.79.217/user/profiles";
 		return this.http.get(url);
 	}
 
+  deliveryboy(){
+    let url = "http://34.215.79.217/boy";
+    return this.http.get(url);
+  }
+
+  banner(){
+    let url = "http://34.215.79.217/banner";
+    return this.http.get(url);
+  }
+  
+  refund(){
+    let url = "http://34.215.79.217/refunds";
+    return this.http.get(url);
+  }
 
   // UserList() {
   //   let url ="http://54.159.158.232/user/profiles";

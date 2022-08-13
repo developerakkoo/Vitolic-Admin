@@ -21,10 +21,9 @@
 
                                         <thead class="headline">
                                             <tr >
-                                                <th class="td-sz" scope="col">S.no.</th>
+                                            
                                                 <th class="td-sz" scope="col"> FirstName </th>
                                                 <th class="td-sz" scope="col">Last Name</th>
-                                                
                                                 <th class="td-sz" scope="col"> Email</th>
                                                 <th class="td-sz" scope="col"> Contact Number </th>
                                                 <th class="td-sz" scope="col">CashbackAvailable</th>
@@ -39,7 +38,7 @@
 
                                         <tbody>
                                             <!-- <tr *ngFor="let item of list ">
-                                                <td class="td-sz" scope="col"> 1</td>
+                                               
                                                 <td class="td-sz" scope="col">{{item.fName}}</td>                            
                                                 <td class="td-sz" scope="col">{{item.lName}} </td>
                                                 <td class="td-sz File" scope="col">{{item.email}}</td>
@@ -49,21 +48,68 @@
                                                 <td class="td-sz " scope="col">{{item.couponCode}}</td>
                                                 <td class="td-sz edt">
                                                     <div class="justify-content-between" style="    margin-top: 8%;">
-                                                        
                                                         <a type="button" class="dropbtn" data-toggle="modal" data-target="#exampleModalCenter" style="margin-right:7px ;">
                                                             <i class="fa fa-pencil" aria-hidden="true"></i>
                                                         </a>
                                                         <a href="#myModal" class="dropbtn mt-2" data-toggle="modal"><i
+                                                                class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>  -->
+
+                                            <tr *ngFor="let item of list ">
+                                                <td class="td-sz" scope="col"> 1</td>
+                                                <td class="td-sz" scope="col">
+                                                    {{item.fName}}
+                                                </td>
+                                                <td class="td-sz" scope="col">{{item.lName}}</td>
+                                                <td class="td-sz File" scope="col"> {{item.email}}
+                                                </td>
+                                                <td class="td-sz " scope="col">{{item.contactNumber}}</td>
+                                                <td class="td-sz " scope="col">{{item.verificationStatus}}</td>
+                                                <td class="td-sz " scope="col">{{item.walletCashbackAvailable}}</td>
+                                                <td class="td-sz" scope="col">{{item.couponCode}}</td>
+                                                <td class="td-sz edt">
+
+                                                    <div class="justify-content-between" style="margin-top: 28%;">
+
+                                                        <a (click)="edit(item)" type="button" class="dropbtn" data-toggle="modal"
+                                                            data-target="#staticBackdrop" style="margin-right:6px ;">
+                                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                        </a>
+                                                        <a (click)="delete(item._id)" href="#myModal" class="dropbtn mt-2" data-toggle="modal"><i
+                                                                class="fa fa-trash-o" aria-hidden="true"></i></a>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+
+                                            <!-- <tr *ngFor="let item of list ">
+                                                <td class="td-sz" scope="col">{{item.fName}}</td>
+                                                <td class="td-sz " scope="col"> {{item.lName}} </td>
+                                                <td class="td-sz " scope="col">{{item.email}}</td>
+                                                <td class="td-sz " scope="col">{{item.contactNumbe}}</td>
+                                                <td class="td-sz " scope="col">{{item.verificationStatus}}</td>
+                                                <td class="td-sz" scope="col">{{item.walletCashbackAvailable }}</td>
+                                                <td class="td-sz" scope="col">{{item.couponCode}}</td>
+                                                <td class="td-sz edt">
+
+                                                    <div class="justify-content-between" style="margin-top: 28%;">
+
+                                                        <a (click)="edit(item)" type="button" class="dropbtn" data-toggle="modal"
+                                                            data-target="#staticBackdrop" style="margin-right:6px ;">
+                                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                        </a>
+                                                        <a (click)="delete(item._id)" href="#myModal" class="dropbtn mt-2" data-toggle="modal"><i
                                                                 class="fa fa-trash-o" aria-hidden="true"></i></a>
 
                                                     </div>
                                                 </td>
                                             </tr> -->
 
-
-
-                                            <tr *ngFor="let item of UserList ">
-                                                <td class="td-sz" scope="col"> 1</td>
+<!-- 
+                                            <tr *ngFor="let item of list ">
                                                 <td class="td-sz" scope="col">{{item.fName }}</td>
                                                 <td class="td-sz File" scope="col"> {{item.lName}}
                                                 </td>
@@ -82,12 +128,12 @@
                                                             data-target="#staticBackdrop" style="margin-right:7px ;">
                                                             <i class="fa fa-pencil" aria-hidden="true"></i>
                                                         </a>
-                                                        <!-- <a (click)="delete(item._id)" href="#myModal" class="dropbtn mt-2" data-toggle="modal"><i
-                                                                class="fa fa-trash-o" aria-hidden="true"></i></a> -->
+                                                        <a (click)="delete(item._id)" href="#myModal" class="dropbtn mt-2" data-toggle="modal"><i
+                                                                class="fa fa-trash-o" aria-hidden="true"></i></a>
 
                                                     </div>
                                                 </td>
-                                            </tr>
+                                            </tr> -->
 
 
 

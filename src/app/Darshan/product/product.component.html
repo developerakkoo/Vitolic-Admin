@@ -21,13 +21,17 @@
 
                                         <thead class="headline">
                                             <tr>
-                                                <th class="td-sz" scope="col">S.no.</th>
-                                                <th class="td-sz" scope="col">Image</th>
-                                                <th class="td-sz" scope="col">Product Name</th>
-                                                <th class="td-sz" scope="col">Product Description </th>
-                                                <th class="td-sz" scope="col"> Discounted Price</th>
+                                             
+                                                <th class="td-sz" scope="col">Title </th>
+                                                <th class="td-sz" scope="col">Images </th>
                                                 <th class="td-sz" scope="col"> Price</th>
-                                                <th class="td-sz" scope="col">Quantity</th>
+                                                <th class="td-sz" scope="col"> Discounted Price</th>
+                                                <th class="td-sz" scope="col">in Stock </th>
+                                                <th class="td-sz" scope="col">Category  </th>
+                                                <th class="td-sz" scope="col">Stock</th>
+                                              
+                                             
+                                                <th class="td-sz" scope="col">Units </th>
 
 
                                                 <th class="justify-content-end" scope="col">Action</th>
@@ -38,31 +42,27 @@
 
                                         <tbody >
                                             <tr *ngFor="let item of list ">
-                                                <td class="td-sz" scope="col"> 1</td>
-                                                <td class="td-sz" scope="col">
+                                                <td class="td-sz File" scope="col"> {{item.title}} </td>
+                                                <td class="" scope="col">
                                                     <img [src]="item.imageUrl" class="img-fluid Tab"
                                                         alt="...">
                                                 </td>
-                                                <td class="td-sz" scope="col">{{item._id}}</td>
-                                                <td class="td-sz File" scope="col"> {{item.title}}
-                                                </td>
                                                 <td class="td-sz " scope="col">{{item.price}}</td>
                                                 <td class="td-sz " scope="col">{{item.discountedPrice}}</td>
+                                                <td class="td-sz" scope="col">{{item.inStock}}</td>
+                                                <td class="td-sz" scope="col">{{item.category }}</td>
+                                                <td class="td-sz" scope="col">{{item.stock}}</td>
+                                               
+                                                
                                                 <td class="td-sz " scope="col">
-                                                    <select  class="form-control" id="exampleFormControlSelect1">
-                                                        <option>1</option>
-                                                        <option>1</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                    </select>
+                                                    {{item.units }}
                                                 </td>
                                                 <td class="td-sz edt">
 
-                                                    <div class="justify-content-between" style="margin-top: 28%;">
+                                                    <div class="justify-content-between" style="margin-top: 8%;">
 
                                                         <a (click)="edit(item)" type="button" class="dropbtn" data-toggle="modal"
-                                                            data-target="#staticBackdrop" style="margin-right:7px ;">
+                                                            data-target="#staticBackdrop" style="margin-right:6px ;">
                                                             <i class="fa fa-pencil" aria-hidden="true"></i>
                                                         </a>
                                                         <a (click)="delete(item._id)" href="#myModal" class="dropbtn mt-2" data-toggle="modal"><i

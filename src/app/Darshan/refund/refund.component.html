@@ -21,10 +21,10 @@
 
                                         <thead class="headline">
                                             <tr>
-                                                <th class="td-sz" scope="col">S.no.</th>
+                                       
                                                 <th class="td-sz" scope="col">user Id</th>
                                                 <th class="td-sz" scope="col">order Id</th>
-                                                <th class="td-sz" scope="col">description  </th>
+                                                <th class="td-sz" scope="col">description </th>
                                                
 
 
@@ -35,19 +35,14 @@
 
 
                                         <tbody >
-                                            <tr >
-                                                <td class="td-sz" scope="col"> 1</td>
+                                            <tr *ngFor="let item of list ">
+                                                <td class="td-sz" scope="col">{{item.userId}}
+                                               </td>
                                                 
-                                                <td class="td-sz" scope="col"></td>
-                                                <td class="td-sz File" scope="col">
-                                                </td>
-                                                <td class="td-sz " scope="col"></td>
-                                           
-                                          
+                                                <td class="td-sz " scope="col"> {{item.orderId}}</td>
+                                                <td class="td-sz File" scope="col">{{item.description}} </td>
                                                 <td class="td-sz edt">
-
-                                                    <div class="justify-content-between" style="    margin-top: 5%;">
-
+                                                    <div class="justify-content-between" style="margin-top: 5%;">
                                                         <a type="button" class="dropbtn" data-toggle="modal"
                                                             data-target="#staticBackdrop" style="margin-right:7px ;">
                                                             <i class="fa fa-pencil" aria-hidden="true"></i>

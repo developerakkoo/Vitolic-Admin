@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ServiceService } from '../../service/service.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { environment } from 'src/environments/environment';
+import { ServiceService } from '../../service/service.service'
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -12,7 +11,7 @@ import { environment } from 'src/environments/environment';
 export class UserListComponent implements OnInit {
   UserEitForm:any=FormGroup;
   submitted = false;
-  UserList: any;
+  list: any;
   User: any;
 
   constructor(private formBuilder:FormBuilder,private http: HttpClient,
@@ -22,7 +21,7 @@ export class UserListComponent implements OnInit {
     this.api.UserList()
     .subscribe((status:any) =>{
       console.log(status)
-      this.UserList = status['user/profiles'];
+      this.list = status['user/profiles'];
     });
 
 
